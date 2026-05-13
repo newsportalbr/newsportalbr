@@ -2,126 +2,75 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Termos de Uso - NewsPortal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Adsterra Display -->
+    <script>
+        atOptions = {
+            'key' : '59b1a95083fc4642ac472862070573fb',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+        };
+    </script>
+    <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #08111f;
-            color: #fff;
-            line-height: 1.6;
-        }
-        .header {
-            background: #0d1726;
-            padding: 15px 20px;
-            border-bottom: 3px solid #49a7ff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .header-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #49a7ff;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo i { font-size: 28px; }
-        .theme-toggle {
-            background: #0f1a2e;
-            border: 1px solid #49a7ff;
-            padding: 8px 15px;
-            border-radius: 25px;
-            cursor: pointer;
-            color: #fff;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-        .theme-toggle:hover {
-            background: #49a7ff;
-            transform: scale(1.05);
-        }
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 30px;
-            background: #0f1a2e;
-            border-radius: 16px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-        }
-        h1 { color: #49a7ff; margin-bottom: 20px; font-size: 28px; }
-        h2 { color: #49a7ff; margin: 25px 0 15px; font-size: 22px; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #08111f; color: #fff; line-height: 1.6; }
+        .header { background: #0d1726; padding: 15px 20px; border-bottom: 3px solid #49a7ff; }
+        .header-content { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; color: #49a7ff; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .theme-toggle { background: #0f1a2e; border: 1px solid #49a7ff; padding: 8px 15px; border-radius: 25px; cursor: pointer; color: #fff; }
+        .main-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 300px; gap: 30px; }
+        .container { background: #0f1a2e; border-radius: 16px; padding: 30px; }
+        .sidebar { position: sticky; top: 100px; }
+        .ad-sidebar { background: linear-gradient(135deg, #0f1a2e, #0d1726); border-radius: 16px; padding: 20px; text-align: center; border: 2px dashed #49a7ff; margin-bottom: 20px; }
+        .ad-label { font-size: 11px; color: #49a7ff; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
+        h1 { color: #49a7ff; margin-bottom: 20px; }
+        h2 { color: #49a7ff; margin: 25px 0 15px; }
         p { margin-bottom: 15px; color: #a0b3d9; }
-        .back-button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 10px 20px;
-            background: #49a7ff;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-        .back-button:hover {
-            background: #ff6b35;
-            transform: translateY(-2px);
-        }
-        .footer {
-            background: #0d1726;
-            padding: 30px 20px;
-            text-align: center;
-            margin-top: 50px;
-        }
+        .back-button { display: inline-block; margin-top: 30px; padding: 10px 20px; background: #49a7ff; color: white; text-decoration: none; border-radius: 8px; }
+        .footer { background: #0d1726; padding: 30px 20px; text-align: center; margin-top: 50px; }
+        @media (max-width: 768px) { .main-container { grid-template-columns: 1fr; } .sidebar { position: static; } }
     </style>
 </head>
 <body>
     <div class="header">
         <div class="header-content">
-            <a href="index.html" class="logo">
-                <i class="fas fa-newspaper"></i>
-                <span>NewsPortal</span>
-            </a>
-            <button class="theme-toggle" onclick="toggleTheme()">
-                <i class="fas fa-moon"></i>
-            </button>
+            <a href="index.html" class="logo"><i class="fas fa-newspaper"></i><span>NewsPortal</span></a>
+            <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
         </div>
     </div>
-    <div class="container">
-        <h1><i class="fas fa-file-contract"></i> Termos de Uso</h1>
-        <p><strong>Última atualização:</strong> 13/05/2026</p>
+    
+    <div class="main-container">
+        <div class="container">
+            <h1><i class="fas fa-file-contract"></i> Termos de Uso</h1>
+            <p><strong>Última atualização:</strong> 13/05/2026</p>
+            <h2>Uso do Site</h2>
+            <p>Ao acessar o NewsPortal, você concorda com estes termos.</p>
+            <h2>Anúncios</h2>
+            <p>Utilizamos a rede Adsterra para exibir anúncios.</p>
+            <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar</a>
+        </div>
         
-        <h2>1. Aceitação dos Termos</h2>
-        <p>Ao acessar e usar o NewsPortal, você concorda com estes Termos de Uso.</p>
-        
-        <h2>2. Conteúdo do Site</h2>
-        <p>Todo o conteúdo é para fins informativos. Não garantimos precisão absoluta.</p>
-        
-        <h2>3. Anúncios</h2>
-        <p>Utilizamos a rede HighPerformanceFormat para exibir anúncios.</p>
-        
-        <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar</a>
+        <div class="sidebar">
+            <div class="ad-sidebar"><div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+                <div><script>atOptions={'key':'59b1a95083fc4642ac472862070573fb','format':'iframe','height':250,'width':300,'params':{}};</script>
+                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script></div>
+            </div>
+        </div>
     </div>
-    <div class="footer">
-        <p>&copy; 2024 NewsPortal</p>
-    </div>
+    
+    <div class="footer"><p>&copy; 2024 NewsPortal</p></div>
+    
     <script>
         function toggleTheme() {
             const html = document.documentElement;
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            const newTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
         }

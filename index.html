@@ -5,37 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
     <title>NewsPortal - Últimas Notícias em Tempo Real</title>
-    <meta name="description" content="Portal de notícias atualizado constantemente com as principais manchetes do Brasil e do mundo. Tecnologia, política, economia e entretenimento.">
-    <meta name="keywords" content="notícias, portal, atualidades, Brasil, mundo, tecnologia, política, economia">
+    <meta name="description" content="Portal de notícias atualizado constantemente com as principais manchetes do Brasil e do mundo.">
+    <meta name="keywords" content="notícias, portal, atualidades, Brasil, mundo">
     <meta name="author" content="NewsPortal">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://seudominio.com">
+    <link rel="canonical" href="https://newsportalbr.github.io/">
     
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://seudominio.com">
+    <meta property="og:url" content="https://newsportalbr.github.io/">
     <meta property="og:title" content="NewsPortal - Últimas Notícias em Tempo Real">
-    <meta property="og:description" content="Portal de notícias atualizado constantemente com as principais manchetes do Brasil e do mundo. Tecnologia, política, economia e entretenimento.">
+    <meta property="og:description" content="Portal de notícias atualizado constantemente com as principais manchetes do Brasil e do mundo.">
     <meta property="og:image" content="https://via.placeholder.com/512x512?text=NP">
     <meta property="og:site_name" content="NewsPortal">
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="NewsPortal - Últimas Notícias em Tempo Real">
-    <meta name="twitter:description" content="Portal de notícias atualizado constantemente com as principais manchetes do Brasil e do mundo. Tecnologia, política, economia e entretenimento.">
+    <meta name="twitter:description" content="Portal de notícias atualizado constantemente com as principais manchetes do Brasil e do mundo.">
     <meta name="twitter:image" content="https://via.placeholder.com/512x512?text=NP">
     
     <meta name="theme-color" content="#08111f">
     
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📰</text></svg>">
     
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "NewsMediaOrganization",
-        "name": "NewsPortal",
-        "url": "https://seudominio.com"
-    }
-    </script>
-    
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -44,7 +36,7 @@
         gtag('config', 'UA-XXXXXXX-X');
     </script>
     
-    <!-- HighPerformanceFormat -->
+    <!-- Adsterra Display (Global) -->
     <script>
         atOptions = {
             'key' : '59b1a95083fc4642ac472862070573fb',
@@ -54,7 +46,6 @@
             'params' : {}
         };
     </script>
-    <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -331,6 +322,14 @@
             margin-bottom: 15px;
         }
         
+        .ad-native {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px auto;
+            border: 1px solid rgba(73, 167, 255, 0.2);
+        }
+        
         .newsletter {
             background: linear-gradient(135deg, var(--primary), var(--accent));
             border-radius: 16px;
@@ -461,6 +460,14 @@
             visibility: visible;
         }
         
+        .socialbar-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 grid-template-columns: 1fr;
@@ -541,7 +548,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -550,12 +557,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://g1.globo.com/to/tocantins/noticia/2026/05/12/acidente-envolvendo-tres-carros-deixa-um-morto-e-feridos-na-br-153.ghtml" data-title="Acidente envolvendo três carros deixa um morto e feridos na BR-153">
-            <a href="https://g1.globo.com/to/tocantins/noticia/2026/05/12/acidente-envolvendo-tres-carros-deixa-um-morto-e-feridos-na-br-153.ghtml" target="_blank">
+        <div class="card" data-url="https://g1.globo.com/economia/noticia/2026/05/13/taxa-das-blusinhas-imposto-revogado-por-lula-arrecadou-mais-de-r-9-bi-em-menos-de-dois-anos.ghtml" data-title="Taxa das blusinhas: imposto revogado por Lula arrecadou mais de R$ 9 bi em menos de dois anos">
+            <a href="https://g1.globo.com/economia/noticia/2026/05/13/taxa-das-blusinhas-imposto-revogado-por-lula-arrecadou-mais-de-r-9-bi-em-menos-de-dois-anos.ghtml" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://s2-g1.glbimg.com/mEZnisBYHt2PFv4mjjdOPkjgBCI=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/d/L/B5CgEBQQW75yYAI9r6OQ/foto-e-montagem-vertical-27-.jpg" 
-                         alt="Acidente envolvendo três carros deixa um morto e feridos na BR-153"
+                         src="https://s2-g1.glbimg.com/0LyCDdXBA6eAba8yYIItW-6R2BQ=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/i/P/qg88tvQo2VJB31ZiCpuA/2025-10-15t145434z-782413783-rc2voda1t375-rtrmadp-3-italy-fashion-china.jpg" 
+                         alt="Taxa das blusinhas: imposto revogado por Lula arrecadou mais de R$ 9 bi em menos de dois anos"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -570,10 +577,10 @@
                         <i class="fas fa-globe"></i> G1
                     </div>
                     <div class="title">
-                        Acidente envolvendo três carros deixa um morto e feridos na BR-153
+                        Taxa das blusinhas: imposto revogado por Lula arrecadou mais de R$ 9 bi em menos de dois anos
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Acidente envolvendo três carros deixa um morto e feridos na BR-153....
+                        Leia as últimas notícias sobre Taxa das blusinhas: imposto revogado por Lula arrecadou mais de R$ 9 bi em menos de dois anos....
                     </div>
                     <div class="meta">
                         <span>
@@ -586,7 +593,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -595,12 +602,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www1.folha.uol.com.br/poder/2026/05/kassio-que-agora-preside-tse-foi-a-favor-de-manter-bolsonaro-elegivel-relembre-votos.shtml" data-title="Kassio, que agora preside TSE, foi a favor de manter Bolsonaro elegível; relembre votos">
-            <a href="https://www1.folha.uol.com.br/poder/2026/05/kassio-que-agora-preside-tse-foi-a-favor-de-manter-bolsonaro-elegivel-relembre-votos.shtml" target="_blank">
+        <div class="card" data-url="https://noticias.uol.com.br/cotidiano/ultimas-noticias/2026/05/12/mp-divulga-imagens-periciais-de-cao-orelha-antes-da-morte-e-de-exumacao.ghtm" data-title="MP divulga imagens periciais de cão Orelha antes da morte e de exumação">
+            <a href="https://noticias.uol.com.br/cotidiano/ultimas-noticias/2026/05/12/mp-divulga-imagens-periciais-de-cao-orelha-antes-da-morte-e-de-exumacao.ghtm" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://f.i.uol.com.br/fotografia/2025/02/14/173954420067af568869f7d_1739544200_3x2_rt.jpg" 
-                         alt="Kassio, que agora preside TSE, foi a favor de manter Bolsonaro elegível; relembre votos"
+                         src="https://via.placeholder.com/800x600?text=News+Image" 
+                         alt="MP divulga imagens periciais de cão Orelha antes da morte e de exumação"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -615,10 +622,10 @@
                         <i class="fas fa-globe"></i> UOL
                     </div>
                     <div class="title">
-                        Kassio, que agora preside TSE, foi a favor de manter Bolsonaro elegível; relembre votos
+                        MP divulga imagens periciais de cão Orelha antes da morte e de exumação
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Kassio, que agora preside TSE, foi a favor de manter Bolsonaro elegível; relembre votos....
+                        Leia as últimas notícias sobre MP divulga imagens periciais de cão Orelha antes da morte e de exumação....
                     </div>
                     <div class="meta">
                         <span>
@@ -631,7 +638,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -640,30 +647,30 @@
             </a>
         </div>
     
-        <div class="card ad-card">
-            <div class="ad-label">
-                <i class="fas fa-ad"></i> Publicidade
-            </div>
-            <div id="hpf-ad-29331025">
-                <script>
-                    atOptions = {
-                        'key' : '59b1a95083fc4642ac472862070573fb',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
-            </div>
+    <div class="card ad-card">
+        <div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+        <div style="width:100%; max-width:300px; margin:0 auto;">
+            <script>
+                atOptions = {
+                    'key' : '59b1a95083fc4642ac472862070573fb',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
         </div>
+    </div>
     
-        <div class="card" data-url="https://www.cnnbrasil.com.br/politica/espero-que-todos-votem-com-liberdade-e-responsabilidade-diz-mendonca/" data-title="Espero que todos votem com liberdade e responsabilidade, diz Mendonça">
-            <a href="https://www.cnnbrasil.com.br/politica/espero-que-todos-votem-com-liberdade-e-responsabilidade-diz-mendonca/" target="_blank">
+    <script src="https://pl29431520.profitablecpmratenetwork.com/2f/d6/1d/2fd61d919a93eebbd3c62ee7335040f7.js"></script>
+    
+        <div class="card" data-url="https://www.cnnbrasil.com.br/educacao/mec-abre-renegociacao-do-fies-com-descontos-de-ate-99-nesta-quarta-13/" data-title="MEC abre renegociação do Fies com descontos de até 99% nesta quarta (13)">
+            <a href="https://www.cnnbrasil.com.br/educacao/mec-abre-renegociacao-do-fies-com-descontos-de-ate-99-nesta-quarta-13/" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/andre-mendonca-stf.jpg?w=1200&h=630&crop=1" 
-                         alt="Espero que todos votem com liberdade e responsabilidade, diz Mendonça"
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/desenrola.jpeg?w=768&h=512&crop=1" 
+                         alt="MEC abre renegociação do Fies com descontos de até 99% nesta quarta (13)"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -678,10 +685,10 @@
                         <i class="fas fa-globe"></i> CNN Brasil
                     </div>
                     <div class="title">
-                        Espero que todos votem com liberdade e responsabilidade, diz Mendonça
+                        MEC abre renegociação do Fies com descontos de até 99% nesta quarta (13)
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Espero que todos votem com liberdade e responsabilidade, diz Mendonça....
+                        Leia as últimas notícias sobre MEC abre renegociação do Fies com descontos de até 99% nesta quarta (13)....
                     </div>
                     <div class="meta">
                         <span>
@@ -694,7 +701,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -703,12 +710,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www.terra.com.br/vida-e-estilo/saude/hospitais-na-linha-de-frente-da-crise-climatica-como-a-saude-se-prepara-para-as-novas-emergencias,28d6fca4ffe91315bb189992a70d0708ltlkwv3b.html" data-title="Hospitais na linha de frente da crise climática: como a saúde se prepara para as novas emergências">
-            <a href="https://www.terra.com.br/vida-e-estilo/saude/hospitais-na-linha-de-frente-da-crise-climatica-como-a-saude-se-prepara-para-as-novas-emergencias,28d6fca4ffe91315bb189992a70d0708ltlkwv3b.html" target="_blank">
+        <div class="card" data-url="https://www.terra.com.br/esportes/futebol/copa-do-brasil/cruzeiro-vence-e-se-classificar-para-as-oitavas-da-copa-do-brasil,ac5bed5a77c93048d12e76d14bf6f6e1r9g86cap.html" data-title="Cruzeiro vence e se classificar para as oitavas da Copa do Brasil">
+            <a href="https://www.terra.com.br/esportes/futebol/copa-do-brasil/cruzeiro-vence-e-se-classificar-para-as-oitavas-da-copa-do-brasil,ac5bed5a77c93048d12e76d14bf6f6e1r9g86cap.html" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/2133690329-hospital-1778630798694.jpg" 
-                         alt="Hospitais na linha de frente da crise climática: como a saúde se prepara para as novas emergências"
+                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/1364932676-552666350012bdb07c535o-scaled.jpg" 
+                         alt="Cruzeiro vence e se classificar para as oitavas da Copa do Brasil"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -723,10 +730,10 @@
                         <i class="fas fa-globe"></i> Terra
                     </div>
                     <div class="title">
-                        Hospitais na linha de frente da crise climática: como a saúde se prepara para as novas emergências
+                        Cruzeiro vence e se classificar para as oitavas da Copa do Brasil
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Hospitais na linha de frente da crise climática: como a saúde se prepara para as novas emergências....
+                        Leia as últimas notícias sobre Cruzeiro vence e se classificar para as oitavas da Copa do Brasil....
                     </div>
                     <div class="meta">
                         <span>
@@ -739,7 +746,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -784,7 +791,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -793,30 +800,28 @@
             </a>
         </div>
     
-        <div class="card ad-card">
-            <div class="ad-label">
-                <i class="fas fa-ad"></i> Publicidade
-            </div>
-            <div id="hpf-ad-29331025">
-                <script>
-                    atOptions = {
-                        'key' : '59b1a95083fc4642ac472862070573fb',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
-            </div>
+    <div class="card ad-card">
+        <div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+        <div style="width:100%; max-width:300px; margin:0 auto;">
+            <script>
+                atOptions = {
+                    'key' : '59b1a95083fc4642ac472862070573fb',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
         </div>
+    </div>
     
-        <div class="card" data-url="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/nunes-marques-assume-a-presidencia-do-tse-ministro-vai-comandar-as-eleicoes-de-outubro.ghtml" data-title="Nunes Marques assume a presidência do TSE; ministro vai comandar as eleições de outubro">
-            <a href="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/nunes-marques-assume-a-presidencia-do-tse-ministro-vai-comandar-as-eleicoes-de-outubro.ghtml" target="_blank">
+        <div class="card" data-url="https://g1.globo.com/pa/para/noticia/2026/05/12/fio-de-alta-tensao-se-rompe-durante-procissao-das-velas-em-belem.ghtml" data-title="Fio de alta tensão se rompe durante Procissão das Velas em Belém">
+            <a href="https://g1.globo.com/pa/para/noticia/2026/05/12/fio-de-alta-tensao-se-rompe-durante-procissao-das-velas-em-belem.ghtml" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://s2-g1.glbimg.com/IqFqNUBDcRt19CiMXO2yheJQZbg=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/X/u/UloBlwQSiQBGmfJyplHA/globo-canal-4-20260512-2000-frame-139508.jpeg" 
-                         alt="Nunes Marques assume a presidência do TSE; ministro vai comandar as eleições de outubro"
+                         src="https://s2-g1.glbimg.com/muhIwC-ca0gj1wiUjVNq6k3t55M=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/v/r/JAAALET2isheAENk1NqA/sem-titulo.png" 
+                         alt="Fio de alta tensão se rompe durante Procissão das Velas em Belém"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -831,10 +836,10 @@
                         <i class="fas fa-globe"></i> G1
                     </div>
                     <div class="title">
-                        Nunes Marques assume a presidência do TSE; ministro vai comandar as eleições de outubro
+                        Fio de alta tensão se rompe durante Procissão das Velas em Belém
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Nunes Marques assume a presidência do TSE; ministro vai comandar as eleições de outubro....
+                        Leia as últimas notícias sobre Fio de alta tensão se rompe durante Procissão das Velas em Belém....
                     </div>
                     <div class="meta">
                         <span>
@@ -847,7 +852,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -856,12 +861,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www1.folha.uol.com.br/mercado/2026/05/disputa-entre-socios-da-azzas-2154-aprofunda-estresse-em-grupo-dono-de-hering-e-arezzo.shtml" data-title="Disputa entre sócios da Azzas 2154 aprofunda estresse em grupo dono de Hering e Arezzo">
-            <a href="https://www1.folha.uol.com.br/mercado/2026/05/disputa-entre-socios-da-azzas-2154-aprofunda-estresse-em-grupo-dono-de-hering-e-arezzo.shtml" target="_blank">
+        <div class="card" data-url="https://tnonline.uol.com.br/noticias/cotidiano/aposta-unica-leva-mais-de-r-15-milhao-na-lotofacil-concurso-3683-saiba-onde-1089073" data-title="Aposta única leva mais de R$ 1,5 milhão na Lotofácil concurso 3683; saiba onde">
+            <a href="https://tnonline.uol.com.br/noticias/cotidiano/aposta-unica-leva-mais-de-r-15-milhao-na-lotofacil-concurso-3683-saiba-onde-1089073" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://f.i.uol.com.br/fotografia/2026/05/12/17786339456a03ccd90e4b1_1778633945_3x2_rt.jpg" 
-                         alt="Disputa entre sócios da Azzas 2154 aprofunda estresse em grupo dono de Hering e Arezzo"
+                         src="https://cdn.tnonline.com.br/img/Artigo-Destaque/1080000/1200x630/o-premio-anunciado-para-o-concurso-3684-que-sera-s-01089073-0-202605122329/ScaleProportionalFillBackground-1.jpg?fallback=https%3A%2F%2Fcdn.tnonline.com.br%2Fimg%2FArtigo-Destaque%2F1080000%2Fo-premio-anunciado-para-o-concurso-3684-que-sera-s-01089073-0-202605122329.png%3Fxid%3D1718770&xid=1718770" 
+                         alt="Aposta única leva mais de R$ 1,5 milhão na Lotofácil concurso 3683; saiba onde"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -876,10 +881,10 @@
                         <i class="fas fa-globe"></i> UOL
                     </div>
                     <div class="title">
-                        Disputa entre sócios da Azzas 2154 aprofunda estresse em grupo dono de Hering e Arezzo
+                        Aposta única leva mais de R$ 1,5 milhão na Lotofácil concurso 3683; saiba onde
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Disputa entre sócios da Azzas 2154 aprofunda estresse em grupo dono de Hering e Arezzo....
+                        Leia as últimas notícias sobre Aposta única leva mais de R$ 1,5 milhão na Lotofácil concurso 3683; saiba onde....
                     </div>
                     <div class="meta">
                         <span>
@@ -892,7 +897,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -901,12 +906,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www.cnnbrasil.com.br/esportes/futebol/selecao-brasileira/ancelotti-avalia-temporada-de-neymar-melhorou-bastante-nos-ultimos-jogos/" data-title="Ancelotti avalia temporada de Neymar: “Melhorou bastante nos últimos jogos”">
-            <a href="https://www.cnnbrasil.com.br/esportes/futebol/selecao-brasileira/ancelotti-avalia-temporada-de-neymar-melhorou-bastante-nos-ultimos-jogos/" target="_blank">
+        <div class="card" data-url="https://www.cnnbrasil.com.br/internacional/relatorio-detalha-violencia-sexual-durante-ataque-do-hamas-em-7-de-outubro/" data-title="Relatório detalha violência sexual durante ataque do Hamas em 7 de outubro">
+            <a href="https://www.cnnbrasil.com.br/internacional/relatorio-detalha-violencia-sexual-durante-ataque-do-hamas-em-7-de-outubro/" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/03/ancelotti-e1774568638558.jpg?w=1200&h=630&crop=1" 
-                         alt="Ancelotti avalia temporada de Neymar: “Melhorou bastante nos últimos jogos”"
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/03/local-do-festival-de-musica-Nova.png?w=815&h=456&crop=1" 
+                         alt="Relatório detalha violência sexual durante ataque do Hamas em 7 de outubro"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -921,10 +926,10 @@
                         <i class="fas fa-globe"></i> CNN Brasil
                     </div>
                     <div class="title">
-                        Ancelotti avalia temporada de Neymar: “Melhorou bastante nos últimos jogos”
+                        Relatório detalha violência sexual durante ataque do Hamas em 7 de outubro
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Ancelotti avalia temporada de Neymar: “Melhorou bastante nos últimos jogos”....
+                        Leia as últimas notícias sobre Relatório detalha violência sexual durante ataque do Hamas em 7 de outubro....
                     </div>
                     <div class="meta">
                         <span>
@@ -937,7 +942,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -946,30 +951,28 @@
             </a>
         </div>
     
-        <div class="card ad-card">
-            <div class="ad-label">
-                <i class="fas fa-ad"></i> Publicidade
-            </div>
-            <div id="hpf-ad-29331025">
-                <script>
-                    atOptions = {
-                        'key' : '59b1a95083fc4642ac472862070573fb',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
-            </div>
+    <div class="card ad-card">
+        <div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+        <div style="width:100%; max-width:300px; margin:0 auto;">
+            <script>
+                atOptions = {
+                    'key' : '59b1a95083fc4642ac472862070573fb',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
         </div>
+    </div>
     
-        <div class="card" data-url="https://www.terra.com.br/esportes/futebol/copa-2026/copa-do-mundo-avenida-paulista-recebera-campeonato-de-bafo,8d4f9c6d77928387641803023e9e26076egad5kz.html" data-title="Copa do Mundo: Avenida Paulista receberá campeonato de bafo">
-            <a href="https://www.terra.com.br/esportes/futebol/copa-2026/copa-do-mundo-avenida-paulista-recebera-campeonato-de-bafo,8d4f9c6d77928387641803023e9e26076egad5kz.html" target="_blank">
+        <div class="card" data-url="https://www.terra.com.br/esportes/futebol/copa-do-brasil/fluminense-leva-susto-mas-vence-operario-pr-e-avanca-na-copa-do-brasil,68a96917f81c42f6fda5ac49c7c9a477umtxczrt.html" data-title="Fluminense leva susto, mas vence Operário-PR e avança na Copa do Brasil">
+            <a href="https://www.terra.com.br/esportes/futebol/copa-do-brasil/fluminense-leva-susto-mas-vence-operario-pr-e-avanca-na-copa-do-brasil,68a96917f81c42f6fda5ac49c7c9a477umtxczrt.html" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/07/1737293855-u2is3fdehfb5hjoyhxnfafbop4.png" 
-                         alt="Copa do Mundo: Avenida Paulista receberá campeonato de bafo"
+                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/1303680401-55266629151aede3cfddboeasy-resizecom-610x400.jpg" 
+                         alt="Fluminense leva susto, mas vence Operário-PR e avança na Copa do Brasil"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -984,10 +987,10 @@
                         <i class="fas fa-globe"></i> Terra
                     </div>
                     <div class="title">
-                        Copa do Mundo: Avenida Paulista receberá campeonato de bafo
+                        Fluminense leva susto, mas vence Operário-PR e avança na Copa do Brasil
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Copa do Mundo: Avenida Paulista receberá campeonato de bafo....
+                        Leia as últimas notícias sobre Fluminense leva susto, mas vence Operário-PR e avança na Copa do Brasil....
                     </div>
                     <div class="meta">
                         <span>
@@ -1000,7 +1003,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1045,7 +1048,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1054,12 +1057,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://g1.globo.com/am/amazonas/noticia/2026/05/12/morre-will-franco-secretario-adjunto-da-casa-civil-do-amazonas-aos-41-anos.ghtml" data-title="Morre Will Franco, secretário adjunto da Casa Civil do Amazonas, aos 41 anos">
-            <a href="https://g1.globo.com/am/amazonas/noticia/2026/05/12/morre-will-franco-secretario-adjunto-da-casa-civil-do-amazonas-aos-41-anos.ghtml" target="_blank">
+        <div class="card" data-url="https://g1.globo.com/to/tocantins/noticia/2026/05/12/acidente-envolvendo-tres-carros-deixa-um-morto-e-feridos-na-br-153.ghtml" data-title="Acidente envolvendo três carros deixa um morto e feridos na BR-153">
+            <a href="https://g1.globo.com/to/tocantins/noticia/2026/05/12/acidente-envolvendo-tres-carros-deixa-um-morto-e-feridos-na-br-153.ghtml" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://s2-g1.glbimg.com/QAPOiQNIenLAaxcUaMYRaUYbGoM=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/a/1/srXdyBQKC12B2YkglzeQ/g1-will-franco.jpg" 
-                         alt="Morre Will Franco, secretário adjunto da Casa Civil do Amazonas, aos 41 anos"
+                         src="https://s2-g1.glbimg.com/mEZnisBYHt2PFv4mjjdOPkjgBCI=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/d/L/B5CgEBQQW75yYAI9r6OQ/foto-e-montagem-vertical-27-.jpg" 
+                         alt="Acidente envolvendo três carros deixa um morto e feridos na BR-153"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -1074,10 +1077,10 @@
                         <i class="fas fa-globe"></i> G1
                     </div>
                     <div class="title">
-                        Morre Will Franco, secretário adjunto da Casa Civil do Amazonas, aos 41 anos
+                        Acidente envolvendo três carros deixa um morto e feridos na BR-153
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Morre Will Franco, secretário adjunto da Casa Civil do Amazonas, aos 41 anos....
+                        Leia as últimas notícias sobre Acidente envolvendo três carros deixa um morto e feridos na BR-153....
                     </div>
                     <div class="meta">
                         <span>
@@ -1090,7 +1093,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1099,30 +1102,28 @@
             </a>
         </div>
     
-        <div class="card ad-card">
-            <div class="ad-label">
-                <i class="fas fa-ad"></i> Publicidade
-            </div>
-            <div id="hpf-ad-29331025">
-                <script>
-                    atOptions = {
-                        'key' : '59b1a95083fc4642ac472862070573fb',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
-            </div>
+    <div class="card ad-card">
+        <div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+        <div style="width:100%; max-width:300px; margin:0 auto;">
+            <script>
+                atOptions = {
+                    'key' : '59b1a95083fc4642ac472862070573fb',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
         </div>
+    </div>
     
-        <div class="card" data-url="https://www1.folha.uol.com.br/mercado/2026/05/ype-diz-que-mudou-tratamento-da-agua-apos-primeira-fiscalizacao-da-anvisa.shtml" data-title="Ypê diz que mudou tratamento da água após primeira fiscalização da Anvisa">
-            <a href="https://www1.folha.uol.com.br/mercado/2026/05/ype-diz-que-mudou-tratamento-da-agua-apos-primeira-fiscalizacao-da-anvisa.shtml" target="_blank">
+        <div class="card" data-url="https://noticias.uol.com.br/ultimas-noticias/afp/2026/05/12/lakers-querem-dar-tempo-a-lebron-para-que-decida-sobre-seu-futuro.htm" data-title="Lakers querem "dar tempo" a LeBron para que decida sobre seu futuro">
+            <a href="https://noticias.uol.com.br/ultimas-noticias/afp/2026/05/12/lakers-querem-dar-tempo-a-lebron-para-que-decida-sobre-seu-futuro.htm" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://f.i.uol.com.br/fotografia/2026/05/12/17786309546a03c12adb750_1778630954_3x2_rt.jpg" 
-                         alt="Ypê diz que mudou tratamento da água após primeira fiscalização da Anvisa"
+                         src="https://via.placeholder.com/800x600?text=News+Image" 
+                         alt="Lakers querem "dar tempo" a LeBron para que decida sobre seu futuro"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -1137,10 +1138,10 @@
                         <i class="fas fa-globe"></i> UOL
                     </div>
                     <div class="title">
-                        Ypê diz que mudou tratamento da água após primeira fiscalização da Anvisa
+                        Lakers querem "dar tempo" a LeBron para que decida sobre seu futuro
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Ypê diz que mudou tratamento da água após primeira fiscalização da Anvisa....
+                        Leia as últimas notícias sobre Lakers querem "dar tempo" a LeBron para que decida sobre seu futuro....
                     </div>
                     <div class="meta">
                         <span>
@@ -1153,7 +1154,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1162,12 +1163,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www.cnnbrasil.com.br/entretenimento/confira-os-looks-das-celebridades-na-abertura-do-festival-de-cannes-de-2026/" data-title="Confira os looks das celebridades na abertura do Festival de Cannes de 2026">
-            <a href="https://www.cnnbrasil.com.br/entretenimento/confira-os-looks-das-celebridades-na-abertura-do-festival-de-cannes-de-2026/" target="_blank">
+        <div class="card" data-url="https://www.cnnbrasil.com.br/nacional/norte/am/mais-de-70-detentos-sao-transferidos-para-nova-unidade-prisional-no-am/" data-title="Mais de 70 detentos são transferidos para nova unidade prisional no AM">
+            <a href="https://www.cnnbrasil.com.br/nacional/norte/am/mais-de-70-detentos-sao-transferidos-para-nova-unidade-prisional-no-am/" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/cannes.png?w=1200&h=630&crop=1" 
-                         alt="Confira os looks das celebridades na abertura do Festival de Cannes de 2026"
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/APURACAO-CNN-1-3.jpg?w=1200&h=630&crop=1" 
+                         alt="Mais de 70 detentos são transferidos para nova unidade prisional no AM"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -1182,10 +1183,10 @@
                         <i class="fas fa-globe"></i> CNN Brasil
                     </div>
                     <div class="title">
-                        Confira os looks das celebridades na abertura do Festival de Cannes de 2026
+                        Mais de 70 detentos são transferidos para nova unidade prisional no AM
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Confira os looks das celebridades na abertura do Festival de Cannes de 2026....
+                        Leia as últimas notícias sobre Mais de 70 detentos são transferidos para nova unidade prisional no AM....
                     </div>
                     <div class="meta">
                         <span>
@@ -1198,7 +1199,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1207,12 +1208,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www.terra.com.br/esportes/botafogo/justica-suspende-decisao-que-devolve-direitos-politicos-a-eagle,42f02ded18f680e60a37dc4d7992cac6m9itqc4c.html" data-title="Justiça suspende decisão que devolve direitos políticos à Eagle">
-            <a href="https://www.terra.com.br/esportes/botafogo/justica-suspende-decisao-que-devolve-direitos-politicos-a-eagle,42f02ded18f680e60a37dc4d7992cac6m9itqc4c.html" target="_blank">
+        <div class="card" data-url="https://www.terra.com.br/esportes/fluminense/fluminense-vence-o-operario-no-maracana-e-confirma-vaga-nas-oitavas-da-copa-do-brasil,9e3e127b550a16cba1db491be0dd8c673y6z46ws.html" data-title="Fluminense vence o Operário no Maracanã e confirma vaga nas oitavas da Copa do Brasil">
+            <a href="https://www.terra.com.br/esportes/fluminense/fluminense-vence-o-operario-no-maracana-e-confirma-vaga-nas-oitavas-da-copa-do-brasil,9e3e127b550a16cba1db491be0dd8c673y6z46ws.html" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/1344835630-untitled-610x400.jpg" 
-                         alt="Justiça suspende decisão que devolve direitos políticos à Eagle"
+                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/1851256380-fluminense-2048x1365.jpg" 
+                         alt="Fluminense vence o Operário no Maracanã e confirma vaga nas oitavas da Copa do Brasil"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -1227,10 +1228,10 @@
                         <i class="fas fa-globe"></i> Terra
                     </div>
                     <div class="title">
-                        Justiça suspende decisão que devolve direitos políticos à Eagle
+                        Fluminense vence o Operário no Maracanã e confirma vaga nas oitavas da Copa do Brasil
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Justiça suspende decisão que devolve direitos políticos à Eagle....
+                        Leia as últimas notícias sobre Fluminense vence o Operário no Maracanã e confirma vaga nas oitavas da Copa do Brasil....
                     </div>
                     <div class="meta">
                         <span>
@@ -1243,7 +1244,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1252,23 +1253,21 @@
             </a>
         </div>
     
-        <div class="card ad-card">
-            <div class="ad-label">
-                <i class="fas fa-ad"></i> Publicidade
-            </div>
-            <div id="hpf-ad-29331025">
-                <script>
-                    atOptions = {
-                        'key' : '59b1a95083fc4642ac472862070573fb',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
-            </div>
+    <div class="card ad-card">
+        <div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+        <div style="width:100%; max-width:300px; margin:0 auto;">
+            <script>
+                atOptions = {
+                    'key' : '59b1a95083fc4642ac472862070573fb',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
         </div>
+    </div>
     
         <div class="card" data-url="https://www.bbc.com/portuguese/articles/c4g4kx2v17ko?at_medium=RSS&at_campaign=rss" data-title="Como ditadura teria assassinado Juscelino Kubitschek, segundo comissão">
             <a href="https://www.bbc.com/portuguese/articles/c4g4kx2v17ko?at_medium=RSS&at_campaign=rss" target="_blank">
@@ -1306,7 +1305,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1315,12 +1314,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/guerra-no-oriente-medio-pressiona-inflacao-nos-eua-que-atinge-o-nivel-mais-alto-em-3-anos.ghtml" data-title="Guerra no Oriente Médio pressiona inflação nos EUA, que atinge o nível mais alto em 3 anos">
-            <a href="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/guerra-no-oriente-medio-pressiona-inflacao-nos-eua-que-atinge-o-nivel-mais-alto-em-3-anos.ghtml" target="_blank">
+        <div class="card" data-url="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/nunes-marques-assume-a-presidencia-do-tse-ministro-vai-comandar-as-eleicoes-de-outubro.ghtml" data-title="Nunes Marques assume a presidência do TSE; ministro vai comandar as eleições de outubro">
+            <a href="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/nunes-marques-assume-a-presidencia-do-tse-ministro-vai-comandar-as-eleicoes-de-outubro.ghtml" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://s2-g1.glbimg.com/JKpZqSBDOKUfr3_3mLc6qipOsJE=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/P/X/rDGtvERdywLyknJKB3BQ/globo-canal-4-20260512-2000-frame-96462.jpeg" 
-                         alt="Guerra no Oriente Médio pressiona inflação nos EUA, que atinge o nível mais alto em 3 anos"
+                         src="https://s2-g1.glbimg.com/IqFqNUBDcRt19CiMXO2yheJQZbg=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/X/u/UloBlwQSiQBGmfJyplHA/globo-canal-4-20260512-2000-frame-139508.jpeg" 
+                         alt="Nunes Marques assume a presidência do TSE; ministro vai comandar as eleições de outubro"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -1335,10 +1334,10 @@
                         <i class="fas fa-globe"></i> G1
                     </div>
                     <div class="title">
-                        Guerra no Oriente Médio pressiona inflação nos EUA, que atinge o nível mais alto em 3 anos
+                        Nunes Marques assume a presidência do TSE; ministro vai comandar as eleições de outubro
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Guerra no Oriente Médio pressiona inflação nos EUA, que atinge o nível mais alto em 3 anos....
+                        Leia as últimas notícias sobre Nunes Marques assume a presidência do TSE; ministro vai comandar as eleições de outubro....
                     </div>
                     <div class="meta">
                         <span>
@@ -1351,7 +1350,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1360,12 +1359,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www1.folha.uol.com.br/colunas/vaivem/2026/05/setor-de-hortalicas-discute-efeitos-do-clima-sobre-a-atividade.shtml" data-title="Setor de hortaliças discute efeitos do clima sobre a atividade">
-            <a href="https://www1.folha.uol.com.br/colunas/vaivem/2026/05/setor-de-hortalicas-discute-efeitos-do-clima-sobre-a-atividade.shtml" target="_blank">
+        <div class="card" data-url="https://tnonline.uol.com.br/noticias/parana/dupla-de-ladroes-rouba-policial-no-pr-um-morre-e-outro-foge-levando-motocicleta-1089072" data-title="Dupla de ladrões rouba policial no PR; um morre e outro foge levando motocicleta">
+            <a href="https://tnonline.uol.com.br/noticias/parana/dupla-de-ladroes-rouba-policial-no-pr-um-morre-e-outro-foge-levando-motocicleta-1089072" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://f.i.uol.com.br/fotografia/2026/05/12/17786351096a03d1656920d_1778635109_3x2_rt.jpg" 
-                         alt="Setor de hortaliças discute efeitos do clima sobre a atividade"
+                         src="https://cdn.tnonline.com.br/img/Artigo-Destaque/1080000/1200x630/a-vitima-era-um-policial-que-retornava-de-um-super-01089072-0-202605122319/ScaleProportionalFillBackground-1.jpg?fallback=https%3A%2F%2Fcdn.tnonline.com.br%2Fimg%2FArtigo-Destaque%2F1080000%2Fa-vitima-era-um-policial-que-retornava-de-um-super-01089072-0-202605122319.jpg%3Fxid%3D1718761&xid=1718761" 
+                         alt="Dupla de ladrões rouba policial no PR; um morre e outro foge levando motocicleta"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -1380,10 +1379,10 @@
                         <i class="fas fa-globe"></i> UOL
                     </div>
                     <div class="title">
-                        Setor de hortaliças discute efeitos do clima sobre a atividade
+                        Dupla de ladrões rouba policial no PR; um morre e outro foge levando motocicleta
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Setor de hortaliças discute efeitos do clima sobre a atividade....
+                        Leia as últimas notícias sobre Dupla de ladrões rouba policial no PR; um morre e outro foge levando motocicleta....
                     </div>
                     <div class="meta">
                         <span>
@@ -1396,7 +1395,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1405,30 +1404,28 @@
             </a>
         </div>
     
-        <div class="card ad-card">
-            <div class="ad-label">
-                <i class="fas fa-ad"></i> Publicidade
-            </div>
-            <div id="hpf-ad-29331025">
-                <script>
-                    atOptions = {
-                        'key' : '59b1a95083fc4642ac472862070573fb',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
-            </div>
+    <div class="card ad-card">
+        <div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+        <div style="width:100%; max-width:300px; margin:0 auto;">
+            <script>
+                atOptions = {
+                    'key' : '59b1a95083fc4642ac472862070573fb',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
         </div>
+    </div>
     
-        <div class="card" data-url="https://www.cnnbrasil.com.br/entretenimento/shania-twain-fala-sobre-sua-primeira-vez-apresentando-o-acm-awards/" data-title="Shania Twain fala sobre sua primeira vez apresentando o ACM Awards">
-            <a href="https://www.cnnbrasil.com.br/entretenimento/shania-twain-fala-sobre-sua-primeira-vez-apresentando-o-acm-awards/" target="_blank">
+        <div class="card" data-url="https://www.cnnbrasil.com.br/esportes/futebol/copa-do-brasil/fluminense-vence-operario-pr-e-avanca-as-oitavas-de-final-da-copa-do-brasil/" data-title="Fluminense vence Operário-PR e avança às oitavas de final da Copa do Brasil">
+            <a href="https://www.cnnbrasil.com.br/esportes/futebol/copa-do-brasil/fluminense-vence-operario-pr-e-avanca-as-oitavas-de-final-da-copa-do-brasil/" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/07/shania.jpg?w=1200&h=630&crop=1" 
-                         alt="Shania Twain fala sobre sua primeira vez apresentando o ACM Awards"
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/55266838599_5faa5f5d3b_o_1435da-e1778636683155.jpg?w=1200&h=630&crop=1" 
+                         alt="Fluminense vence Operário-PR e avança às oitavas de final da Copa do Brasil"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -1443,10 +1440,10 @@
                         <i class="fas fa-globe"></i> CNN Brasil
                     </div>
                     <div class="title">
-                        Shania Twain fala sobre sua primeira vez apresentando o ACM Awards
+                        Fluminense vence Operário-PR e avança às oitavas de final da Copa do Brasil
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Shania Twain fala sobre sua primeira vez apresentando o ACM Awards....
+                        Leia as últimas notícias sobre Fluminense vence Operário-PR e avança às oitavas de final da Copa do Brasil....
                     </div>
                     <div class="meta">
                         <span>
@@ -1459,7 +1456,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1468,12 +1465,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www.terra.com.br/esportes/botafogo/justica-derruba-decisao-arbitral-e-eagle-perde-poderes-politicos-na-saf-do-botafogo,8b3cf718ec51e6232d40fcdc83ffd36a7ylbupkk.html" data-title="Justiça derruba decisão arbitral e Eagle perde poderes políticos na SAF do Botafogo">
-            <a href="https://www.terra.com.br/esportes/botafogo/justica-derruba-decisao-arbitral-e-eagle-perde-poderes-politicos-na-saf-do-botafogo,8b3cf718ec51e6232d40fcdc83ffd36a7ylbupkk.html" target="_blank">
+        <div class="card" data-url="https://www.terra.com.br/diversao/musica/quem-detem-a-marca-rouge-atualmente,a12cbaf465494ecf7a67fe37a4f0af68s9cdwbay.html" data-title="Quem detém a marca Rouge atualmente?">
+            <a href="https://www.terra.com.br/diversao/musica/quem-detem-a-marca-rouge-atualmente,a12cbaf465494ecf7a67fe37a4f0af68s9cdwbay.html" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/601936297-botafogo-v-cuiaba-brasileirao-2024-2048x1365.jpg" 
-                         alt="Justiça derruba decisão arbitral e Eagle perde poderes políticos na SAF do Botafogo"
+                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/1225807658-lissa-recusa-pedidos-entrevista-documentario-rouge.jpg" 
+                         alt="Quem detém a marca Rouge atualmente?"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -1488,10 +1485,10 @@
                         <i class="fas fa-globe"></i> Terra
                     </div>
                     <div class="title">
-                        Justiça derruba decisão arbitral e Eagle perde poderes políticos na SAF do Botafogo
+                        Quem detém a marca Rouge atualmente?
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Justiça derruba decisão arbitral e Eagle perde poderes políticos na SAF do Botafogo....
+                        Leia as últimas notícias sobre Quem detém a marca Rouge atualmente?....
                     </div>
                     <div class="meta">
                         <span>
@@ -1504,7 +1501,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1549,7 +1546,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1558,30 +1555,28 @@
             </a>
         </div>
     
-        <div class="card ad-card">
-            <div class="ad-label">
-                <i class="fas fa-ad"></i> Publicidade
-            </div>
-            <div id="hpf-ad-29331025">
-                <script>
-                    atOptions = {
-                        'key' : '59b1a95083fc4642ac472862070573fb',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
-            </div>
+    <div class="card ad-card">
+        <div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+        <div style="width:100%; max-width:300px; margin:0 auto;">
+            <script>
+                atOptions = {
+                    'key' : '59b1a95083fc4642ac472862070573fb',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
         </div>
+    </div>
     
-        <div class="card" data-url="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/peritos-investigam-causas-da-explosao-de-gas-que-deixou-um-morto-e-destruiu-dezenas-de-casas-em-sao-paulo.ghtml" data-title="Peritos investigam causas da explosão de gás que deixou um morto e destruiu dezenas de casas em São Paulo">
-            <a href="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/peritos-investigam-causas-da-explosao-de-gas-que-deixou-um-morto-e-destruiu-dezenas-de-casas-em-sao-paulo.ghtml" target="_blank">
+        <div class="card" data-url="https://g1.globo.com/am/amazonas/noticia/2026/05/12/morre-will-franco-secretario-adjunto-da-casa-civil-do-amazonas-aos-41-anos.ghtml" data-title="Morre Will Franco, secretário adjunto da Casa Civil do Amazonas, aos 41 anos">
+            <a href="https://g1.globo.com/am/amazonas/noticia/2026/05/12/morre-will-franco-secretario-adjunto-da-casa-civil-do-amazonas-aos-41-anos.ghtml" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://s2-g1.glbimg.com/cJECciS7y4ddul6bVZUwexCnvN8=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/t/V/a3h19LS6qGxaw9KCAz9g/globo-canal-4-20260512-2000-frame-88089.jpeg" 
-                         alt="Peritos investigam causas da explosão de gás que deixou um morto e destruiu dezenas de casas em São Paulo"
+                         src="https://s2-g1.glbimg.com/QAPOiQNIenLAaxcUaMYRaUYbGoM=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/a/1/srXdyBQKC12B2YkglzeQ/g1-will-franco.jpg" 
+                         alt="Morre Will Franco, secretário adjunto da Casa Civil do Amazonas, aos 41 anos"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -1596,10 +1591,10 @@
                         <i class="fas fa-globe"></i> G1
                     </div>
                     <div class="title">
-                        Peritos investigam causas da explosão de gás que deixou um morto e destruiu dezenas de casas em São Paulo
+                        Morre Will Franco, secretário adjunto da Casa Civil do Amazonas, aos 41 anos
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Peritos investigam causas da explosão de gás que deixou um morto e destruiu dezenas de casas em São Paulo....
+                        Leia as últimas notícias sobre Morre Will Franco, secretário adjunto da Casa Civil do Amazonas, aos 41 anos....
                     </div>
                     <div class="meta">
                         <span>
@@ -1612,7 +1607,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1621,12 +1616,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www1.folha.uol.com.br/mercado/2026/05/governo-proibiu-antibioticos-vetados-por-ue-mas-liberou-uso-de-estoques-ate-outubro.shtml" data-title="Governo proibiu antibióticos vetados por UE, mas liberou uso de estoques até outubro">
-            <a href="https://www1.folha.uol.com.br/mercado/2026/05/governo-proibiu-antibioticos-vetados-por-ue-mas-liberou-uso-de-estoques-ate-outubro.shtml" target="_blank">
+        <div class="card" data-url="https://www1.folha.uol.com.br/poder/2026/05/campanha-pro-ype-revela-elemento-mobilizador-das-teorias-conspiratorias-da-direita-bolsonarista.shtml" data-title="Campanha pró-Ypê revela elemento mobilizador das teorias conspiratórias da direita bolsonarista">
+            <a href="https://www1.folha.uol.com.br/poder/2026/05/campanha-pro-ype-revela-elemento-mobilizador-das-teorias-conspiratorias-da-direita-bolsonarista.shtml" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://f.i.uol.com.br/fotografia/2023/08/24/169291075064e7c49e950f7_1692910750_3x2_xl.jpg" 
-                         alt="Governo proibiu antibióticos vetados por UE, mas liberou uso de estoques até outubro"
+                         src="https://f.i.uol.com.br/fotografia/2026/05/11/17785150476a01fc67b7024_1778515047_3x2_rt.jpg" 
+                         alt="Campanha pró-Ypê revela elemento mobilizador das teorias conspiratórias da direita bolsonarista"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -1641,10 +1636,10 @@
                         <i class="fas fa-globe"></i> UOL
                     </div>
                     <div class="title">
-                        Governo proibiu antibióticos vetados por UE, mas liberou uso de estoques até outubro
+                        Campanha pró-Ypê revela elemento mobilizador das teorias conspiratórias da direita bolsonarista
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Governo proibiu antibióticos vetados por UE, mas liberou uso de estoques até outubro....
+                        Leia as últimas notícias sobre Campanha pró-Ypê revela elemento mobilizador das teorias conspiratórias da direita bolsonarista....
                     </div>
                     <div class="meta">
                         <span>
@@ -1657,7 +1652,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1666,12 +1661,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www.cnnbrasil.com.br/internacional/cia-intensifica-guerra-secreta-contra-carteis-com-operacoes-mexico/" data-title="CIA intensifica guerra secreta contra cartéis com operações no México">
-            <a href="https://www.cnnbrasil.com.br/internacional/cia-intensifica-guerra-secreta-contra-carteis-com-operacoes-mexico/" target="_blank">
+        <div class="card" data-url="https://www.cnnbrasil.com.br/esportes/futebol/copa-do-brasil/cruzeiro-vence-elimina-goias-e-vai-as-oitavas-da-copa-do-brasil/" data-title="Cruzeiro vence, elimina Goiás e vai às oitavas da Copa do Brasil">
+            <a href="https://www.cnnbrasil.com.br/esportes/futebol/copa-do-brasil/cruzeiro-vence-elimina-goias-e-vai-as-oitavas-da-copa-do-brasil/" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2022/07/CIA-EUA.jpg?w=1200&h=630&crop=1" 
-                         alt="CIA intensifica guerra secreta contra cartéis com operações no México"
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/Cruzeiro-x-Goias-Copa-do-Brasil-2026-Gustavo-Aleixo-Cruzeiro-2-e1778637939477.jpg?w=1200&h=630&crop=1" 
+                         alt="Cruzeiro vence, elimina Goiás e vai às oitavas da Copa do Brasil"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -1686,10 +1681,10 @@
                         <i class="fas fa-globe"></i> CNN Brasil
                     </div>
                     <div class="title">
-                        CIA intensifica guerra secreta contra cartéis com operações no México
+                        Cruzeiro vence, elimina Goiás e vai às oitavas da Copa do Brasil
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre CIA intensifica guerra secreta contra cartéis com operações no México....
+                        Leia as últimas notícias sobre Cruzeiro vence, elimina Goiás e vai às oitavas da Copa do Brasil....
                     </div>
                     <div class="meta">
                         <span>
@@ -1702,7 +1697,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1711,30 +1706,28 @@
             </a>
         </div>
     
-        <div class="card ad-card">
-            <div class="ad-label">
-                <i class="fas fa-ad"></i> Publicidade
-            </div>
-            <div id="hpf-ad-29331025">
-                <script>
-                    atOptions = {
-                        'key' : '59b1a95083fc4642ac472862070573fb',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
-            </div>
+    <div class="card ad-card">
+        <div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+        <div style="width:100%; max-width:300px; margin:0 auto;">
+            <script>
+                atOptions = {
+                    'key' : '59b1a95083fc4642ac472862070573fb',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
         </div>
+    </div>
     
-        <div class="card" data-url="https://www.terra.com.br/diversao/musica/shakira-emplaca-duas-musicas-na-hot-100-da-billboard-brasil-apos-show-em-copacabana,f6a041f5385188b7b1d24cb4b30dcc3buf2cn9kr.html" data-title="Shakira emplaca duas músicas na Hot 100 da Billboard Brasil após show em Copacabana">
-            <a href="https://www.terra.com.br/diversao/musica/shakira-emplaca-duas-musicas-na-hot-100-da-billboard-brasil-apos-show-em-copacabana,f6a041f5385188b7b1d24cb4b30dcc3buf2cn9kr.html" target="_blank">
+        <div class="card" data-url="https://www.terra.com.br/esportes/futebol/copa-do-brasil/cruzeiro-perde-gols-em-profusao-mas-vence-goias-e-avanca-na-copa-do-br,8ec621ab114b9faa557ad404cf4798c2hou0rqcg.html" data-title="Cruzeiro perde gols em profusão, mas vence Goiás e avança na Copa do BR">
+            <a href="https://www.terra.com.br/esportes/futebol/copa-do-brasil/cruzeiro-perde-gols-em-profusao-mas-vence-goias-e-avanca-na-copa-do-br,8ec621ab114b9faa557ad404cf4798c2hou0rqcg.html" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/1348690280-shakira-todo-mundo-no-rio.jpg" 
-                         alt="Shakira emplaca duas músicas na Hot 100 da Billboard Brasil após show em Copacabana"
+                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/1142808316-5526686118903317534f7o-610x400.jpg" 
+                         alt="Cruzeiro perde gols em profusão, mas vence Goiás e avança na Copa do BR"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -1749,10 +1742,10 @@
                         <i class="fas fa-globe"></i> Terra
                     </div>
                     <div class="title">
-                        Shakira emplaca duas músicas na Hot 100 da Billboard Brasil após show em Copacabana
+                        Cruzeiro perde gols em profusão, mas vence Goiás e avança na Copa do BR
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Shakira emplaca duas músicas na Hot 100 da Billboard Brasil após show em Copacabana....
+                        Leia as últimas notícias sobre Cruzeiro perde gols em profusão, mas vence Goiás e avança na Copa do BR....
                     </div>
                     <div class="meta">
                         <span>
@@ -1765,7 +1758,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1810,7 +1803,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1819,12 +1812,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://g1.globo.com/politica/noticia/2026/05/12/alcolumbre-nao-bate-palmas-para-messias-durante-posse-de-nunes-marques-no-tse.ghtml" data-title="VÍDEO: Alcolumbre decide não bater palmas para Messias em posse de Nunes Marques no STF">
-            <a href="https://g1.globo.com/politica/noticia/2026/05/12/alcolumbre-nao-bate-palmas-para-messias-durante-posse-de-nunes-marques-no-tse.ghtml" target="_blank">
+        <div class="card" data-url="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/guerra-no-oriente-medio-pressiona-inflacao-nos-eua-que-atinge-o-nivel-mais-alto-em-3-anos.ghtml" data-title="Guerra no Oriente Médio pressiona inflação nos EUA, que atinge o nível mais alto em 3 anos">
+            <a href="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/guerra-no-oriente-medio-pressiona-inflacao-nos-eua-que-atinge-o-nivel-mais-alto-em-3-anos.ghtml" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://s2-g1.glbimg.com/UONor5l7WhAzyRXBlTzWyJKrFYM=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/c/z/ZC1FptRQKa8u1Tu0kd2Q/imagem.jpg" 
-                         alt="VÍDEO: Alcolumbre decide não bater palmas para Messias em posse de Nunes Marques no STF"
+                         src="https://s2-g1.glbimg.com/JKpZqSBDOKUfr3_3mLc6qipOsJE=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/P/X/rDGtvERdywLyknJKB3BQ/globo-canal-4-20260512-2000-frame-96462.jpeg" 
+                         alt="Guerra no Oriente Médio pressiona inflação nos EUA, que atinge o nível mais alto em 3 anos"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -1839,10 +1832,10 @@
                         <i class="fas fa-globe"></i> G1
                     </div>
                     <div class="title">
-                        VÍDEO: Alcolumbre decide não bater palmas para Messias em posse de Nunes Marques no STF
+                        Guerra no Oriente Médio pressiona inflação nos EUA, que atinge o nível mais alto em 3 anos
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre VÍDEO: Alcolumbre decide não bater palmas para Messias em posse de Nunes Marques no STF....
+                        Leia as últimas notícias sobre Guerra no Oriente Médio pressiona inflação nos EUA, que atinge o nível mais alto em 3 anos....
                     </div>
                     <div class="meta">
                         <span>
@@ -1855,7 +1848,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1864,30 +1857,28 @@
             </a>
         </div>
     
-        <div class="card ad-card">
-            <div class="ad-label">
-                <i class="fas fa-ad"></i> Publicidade
-            </div>
-            <div id="hpf-ad-29331025">
-                <script>
-                    atOptions = {
-                        'key' : '59b1a95083fc4642ac472862070573fb',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
-            </div>
+    <div class="card ad-card">
+        <div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+        <div style="width:100%; max-width:300px; margin:0 auto;">
+            <script>
+                atOptions = {
+                    'key' : '59b1a95083fc4642ac472862070573fb',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
         </div>
+    </div>
     
-        <div class="card" data-url="https://www1.folha.uol.com.br/poder/2026/05/com-bolsonaro-isolado-aliados-resistem-em-acatar-indicacao-dos-filhos-para-o-senado.shtml" data-title="Com Bolsonaro isolado, aliados resistem em acatar indicação dos filhos para o Senado">
-            <a href="https://www1.folha.uol.com.br/poder/2026/05/com-bolsonaro-isolado-aliados-resistem-em-acatar-indicacao-dos-filhos-para-o-senado.shtml" target="_blank">
+        <div class="card" data-url="https://tnonline.uol.com.br/noticias/parana/bandidos-sequestram-idosos-no-pr-e-fazem-limpa-em-contas-bancarias-1089071" data-title="Bandidos sequestram idosos no PR e fazem 'limpa' em contas bancárias">
+            <a href="https://tnonline.uol.com.br/noticias/parana/bandidos-sequestram-idosos-no-pr-e-fazem-limpa-em-contas-bancarias-1089071" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://f.i.uol.com.br/fotografia/2026/03/27/177463019969c6b53793346_1774630199_3x2_rt.jpg" 
-                         alt="Com Bolsonaro isolado, aliados resistem em acatar indicação dos filhos para o Senado"
+                         src="https://cdn.tnonline.com.br/img/Artigo-Destaque/1080000/1200x630/somados-os-prejuizos-ultrapassam-r-7-mil-quatro-su-01089071-0-202605122315/ScaleProportionalFillBackground-1.jpg?fallback=https%3A%2F%2Fcdn.tnonline.com.br%2Fimg%2FArtigo-Destaque%2F1080000%2Fsomados-os-prejuizos-ultrapassam-r-7-mil-quatro-su-01089071-0-202605122315.jpg%3Fxid%3D1718752&xid=1718752" 
+                         alt="Bandidos sequestram idosos no PR e fazem 'limpa' em contas bancárias"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -1902,10 +1893,10 @@
                         <i class="fas fa-globe"></i> UOL
                     </div>
                     <div class="title">
-                        Com Bolsonaro isolado, aliados resistem em acatar indicação dos filhos para o Senado
+                        Bandidos sequestram idosos no PR e fazem 'limpa' em contas bancárias
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Com Bolsonaro isolado, aliados resistem em acatar indicação dos filhos para o Senado....
+                        Leia as últimas notícias sobre Bandidos sequestram idosos no PR e fazem 'limpa' em contas bancárias....
                     </div>
                     <div class="meta">
                         <span>
@@ -1918,7 +1909,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1927,12 +1918,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www.cnnbrasil.com.br/politica/durigan-diz-que-trump-se-sensibilizou-com-historia-de-lula/" data-title="Durigan diz que Trump se sensibilizou com história de Lula">
-            <a href="https://www.cnnbrasil.com.br/politica/durigan-diz-que-trump-se-sensibilizou-com-historia-de-lula/" target="_blank">
+        <div class="card" data-url="https://www.cnnbrasil.com.br/entretenimento/conan-obrien-retorna-para-apresentar-o-oscar-2027/" data-title="Conan O’Brien retorna para apresentar o Oscar 2027">
+            <a href="https://www.cnnbrasil.com.br/entretenimento/conan-obrien-retorna-para-apresentar-o-oscar-2027/" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/WhatsApp-Image-2026-05-07-at-15.23.57-e1778262255674.jpeg?w=1200&h=630&crop=1" 
-                         alt="Durigan diz que Trump se sensibilizou com história de Lula"
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/02/Conan-OBrien-em-promo-do-Oscar-2025.png?w=1024&h=576&crop=1" 
+                         alt="Conan O’Brien retorna para apresentar o Oscar 2027"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -1947,10 +1938,10 @@
                         <i class="fas fa-globe"></i> CNN Brasil
                     </div>
                     <div class="title">
-                        Durigan diz que Trump se sensibilizou com história de Lula
+                        Conan O’Brien retorna para apresentar o Oscar 2027
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Durigan diz que Trump se sensibilizou com história de Lula....
+                        Leia as últimas notícias sobre Conan O’Brien retorna para apresentar o Oscar 2027....
                     </div>
                     <div class="meta">
                         <span>
@@ -1963,7 +1954,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1972,12 +1963,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www.terra.com.br/byte/taxa-das-blusinhas-acaba-lula-zera-imposto-de-20-sobre-compras-na-shein-shopee-e-aliexpress,1a5af8a999c367eeea46ef5ada2ca79edb3fj2tr.html" data-title="Taxa das blusinhas acaba: Lula zera imposto de 20% sobre compras na Shein, Shopee e AliExpress">
-            <a href="https://www.terra.com.br/byte/taxa-das-blusinhas-acaba-lula-zera-imposto-de-20-sobre-compras-na-shein-shopee-e-aliexpress,1a5af8a999c367eeea46ef5ada2ca79edb3fj2tr.html" target="_blank">
+        <div class="card" data-url="https://www.terra.com.br/diversao/tv/opiniao-o-dia-em-que-a-globonews-foi-engolida-pelo-tiktok-o-show-de-desinformacao-de-cazarre,8428cdf80fd268441281d6e2ceeada062g8x05ce.html" data-title="Opinião: O dia em que a GloboNews foi engolida pelo TikTok: o show de desinformação de Cazarré">
+            <a href="https://www.terra.com.br/diversao/tv/opiniao-o-dia-em-que-a-globonews-foi-engolida-pelo-tiktok-o-show-de-desinformacao-de-cazarre,8428cdf80fd268441281d6e2ceeada062g8x05ce.html" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/363050180-13662000.png" 
-                         alt="Taxa das blusinhas acaba: Lula zera imposto de 20% sobre compras na Shein, Shopee e AliExpress"
+                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/captura-de-tela-2026-05-12-233223-s4uks9wex1rn.png" 
+                         alt="Opinião: O dia em que a GloboNews foi engolida pelo TikTok: o show de desinformação de Cazarré"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -1992,10 +1983,10 @@
                         <i class="fas fa-globe"></i> Terra
                     </div>
                     <div class="title">
-                        Taxa das blusinhas acaba: Lula zera imposto de 20% sobre compras na Shein, Shopee e AliExpress
+                        Opinião: O dia em que a GloboNews foi engolida pelo TikTok: o show de desinformação de Cazarré
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Taxa das blusinhas acaba: Lula zera imposto de 20% sobre compras na Shein, Shopee e AliExpress....
+                        Leia as últimas notícias sobre Opinião: O dia em que a GloboNews foi engolida pelo TikTok: o show de desinformação de Cazarré....
                     </div>
                     <div class="meta">
                         <span>
@@ -2008,7 +1999,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2017,23 +2008,21 @@
             </a>
         </div>
     
-        <div class="card ad-card">
-            <div class="ad-label">
-                <i class="fas fa-ad"></i> Publicidade
-            </div>
-            <div id="hpf-ad-29331025">
-                <script>
-                    atOptions = {
-                        'key' : '59b1a95083fc4642ac472862070573fb',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
-            </div>
+    <div class="card ad-card">
+        <div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+        <div style="width:100%; max-width:300px; margin:0 auto;">
+            <script>
+                atOptions = {
+                    'key' : '59b1a95083fc4642ac472862070573fb',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
         </div>
+    </div>
     
         <div class="card" data-url="https://www.bbc.com/portuguese/articles/cn4py2eydp3o?at_medium=RSS&at_campaign=rss" data-title="Voos privados concentram metade dos acidentes no país">
             <a href="https://www.bbc.com/portuguese/articles/cn4py2eydp3o?at_medium=RSS&at_campaign=rss" target="_blank">
@@ -2071,7 +2060,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2080,12 +2069,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://g1.globo.com/ce/ceara/suachance/noticia/2026/05/12/assembleia-legislativa-abre-selecao-para-estagiarios-de-niveis-superior-medio-e-profissionalizantes-veja-como-participar.ghtml" data-title="Assembleia Legislativa abre seleção para estagiários de níveis superior, médio e profissionalizantes; veja como participar">
-            <a href="https://g1.globo.com/ce/ceara/suachance/noticia/2026/05/12/assembleia-legislativa-abre-selecao-para-estagiarios-de-niveis-superior-medio-e-profissionalizantes-veja-como-participar.ghtml" target="_blank">
+        <div class="card" data-url="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/peritos-investigam-causas-da-explosao-de-gas-que-deixou-um-morto-e-destruiu-dezenas-de-casas-em-sao-paulo.ghtml" data-title="Peritos investigam causas da explosão de gás que deixou um morto e destruiu dezenas de casas em São Paulo">
+            <a href="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/peritos-investigam-causas-da-explosao-de-gas-que-deixou-um-morto-e-destruiu-dezenas-de-casas-em-sao-paulo.ghtml" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://s2-g1.glbimg.com/f2kx7l_Un7w7fHekdCHA0gcm96s=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/a/9/VBo27BSBecb0ETd0PSdA/alece.jpg" 
-                         alt="Assembleia Legislativa abre seleção para estagiários de níveis superior, médio e profissionalizantes; veja como participar"
+                         src="https://s2-g1.glbimg.com/cJECciS7y4ddul6bVZUwexCnvN8=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/t/V/a3h19LS6qGxaw9KCAz9g/globo-canal-4-20260512-2000-frame-88089.jpeg" 
+                         alt="Peritos investigam causas da explosão de gás que deixou um morto e destruiu dezenas de casas em São Paulo"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -2100,10 +2089,10 @@
                         <i class="fas fa-globe"></i> G1
                     </div>
                     <div class="title">
-                        Assembleia Legislativa abre seleção para estagiários de níveis superior, médio e profissionalizantes; veja como participar
+                        Peritos investigam causas da explosão de gás que deixou um morto e destruiu dezenas de casas em São Paulo
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Assembleia Legislativa abre seleção para estagiários de níveis superior, médio e profissionalizantes; veja como partici...
+                        Leia as últimas notícias sobre Peritos investigam causas da explosão de gás que deixou um morto e destruiu dezenas de casas em São Paulo....
                     </div>
                     <div class="meta">
                         <span>
@@ -2116,7 +2105,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2125,12 +2114,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www1.folha.uol.com.br/equilibrio/2026/05/posso-usar-fones-de-ouvido-ao-dormir-dispositivo-retem-umidade-mas-uso-no-geral-e-seguro.shtml" data-title="Posso usar fone de ouvido ao dormir? Dispositivo retém umidade, mas uso no geral é seguro">
-            <a href="https://www1.folha.uol.com.br/equilibrio/2026/05/posso-usar-fones-de-ouvido-ao-dormir-dispositivo-retem-umidade-mas-uso-no-geral-e-seguro.shtml" target="_blank">
+        <div class="card" data-url="https://www1.folha.uol.com.br/poder/2026/05/lula-pede-mapeamento-de-cargos-para-retaliacao-mas-afaga-alcolumbre-apos-derrotas-no-congresso.shtml" data-title="Lula pede mapeamento de cargos para retaliação, mas afaga Alcolumbre após derrotas no Congresso">
+            <a href="https://www1.folha.uol.com.br/poder/2026/05/lula-pede-mapeamento-de-cargos-para-retaliacao-mas-afaga-alcolumbre-apos-derrotas-no-congresso.shtml" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://f.i.uol.com.br/fotografia/2026/05/12/17786211816a039afd2c522_1778621181_3x2_rt.jpg" 
-                         alt="Posso usar fone de ouvido ao dormir? Dispositivo retém umidade, mas uso no geral é seguro"
+                         src="https://f.i.uol.com.br/fotografia/2026/04/28/177741836069f1407810181_1777418360_3x2_rt.jpg" 
+                         alt="Lula pede mapeamento de cargos para retaliação, mas afaga Alcolumbre após derrotas no Congresso"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -2145,10 +2134,10 @@
                         <i class="fas fa-globe"></i> UOL
                     </div>
                     <div class="title">
-                        Posso usar fone de ouvido ao dormir? Dispositivo retém umidade, mas uso no geral é seguro
+                        Lula pede mapeamento de cargos para retaliação, mas afaga Alcolumbre após derrotas no Congresso
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Posso usar fone de ouvido ao dormir? Dispositivo retém umidade, mas uso no geral é seguro....
+                        Leia as últimas notícias sobre Lula pede mapeamento de cargos para retaliação, mas afaga Alcolumbre após derrotas no Congresso....
                     </div>
                     <div class="meta">
                         <span>
@@ -2161,7 +2150,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2170,30 +2159,28 @@
             </a>
         </div>
     
-        <div class="card ad-card">
-            <div class="ad-label">
-                <i class="fas fa-ad"></i> Publicidade
-            </div>
-            <div id="hpf-ad-29331025">
-                <script>
-                    atOptions = {
-                        'key' : '59b1a95083fc4642ac472862070573fb',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
-            </div>
+    <div class="card ad-card">
+        <div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+        <div style="width:100%; max-width:300px; margin:0 auto;">
+            <script>
+                atOptions = {
+                    'key' : '59b1a95083fc4642ac472862070573fb',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
         </div>
+    </div>
     
-        <div class="card" data-url="https://www.cnnbrasil.com.br/esportes/futebol/copa-do-mundo/campeonato-de-bafo-com-album-da-copa-tera-entrada-gratuita-na-paulista/" data-title="Campeonato de “bafo” com figurinhas da Copa será realizado na Paulista">
-            <a href="https://www.cnnbrasil.com.br/esportes/futebol/copa-do-mundo/campeonato-de-bafo-com-album-da-copa-tera-entrada-gratuita-na-paulista/" target="_blank">
+        <div class="card" data-url="https://www.cnnbrasil.com.br/politica/espero-que-todos-votem-com-liberdade-e-responsabilidade-diz-mendonca/" data-title="Espero que todos votem com liberdade e responsabilidade, diz Mendonça">
+            <a href="https://www.cnnbrasil.com.br/politica/espero-que-todos-votem-com-liberdade-e-responsabilidade-diz-mendonca/" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/04/WhatsApp-Image-2026-04-25-at-14.25.57-2-e1778635457386.jpeg?w=1200&h=630&crop=1" 
-                         alt="Campeonato de “bafo” com figurinhas da Copa será realizado na Paulista"
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/andre-mendonca-stf.jpg?w=1200&h=630&crop=1" 
+                         alt="Espero que todos votem com liberdade e responsabilidade, diz Mendonça"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -2208,10 +2195,10 @@
                         <i class="fas fa-globe"></i> CNN Brasil
                     </div>
                     <div class="title">
-                        Campeonato de “bafo” com figurinhas da Copa será realizado na Paulista
+                        Espero que todos votem com liberdade e responsabilidade, diz Mendonça
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Campeonato de “bafo” com figurinhas da Copa será realizado na Paulista....
+                        Leia as últimas notícias sobre Espero que todos votem com liberdade e responsabilidade, diz Mendonça....
                     </div>
                     <div class="meta">
                         <span>
@@ -2224,7 +2211,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2233,12 +2220,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www.terra.com.br/esportes/internacional/bernabei-valoriza-vaga-do-internacional-e-admite-falhas-estamos-no-caminho,e9bb7a83b4eefada4a8fba27e99fad34q190n8yc.html" data-title="Bernabéi valoriza vaga do Internacional e admite falhas: "Estamos no caminho"">
-            <a href="https://www.terra.com.br/esportes/internacional/bernabei-valoriza-vaga-do-internacional-e-admite-falhas-estamos-no-caminho,e9bb7a83b4eefada4a8fba27e99fad34q190n8yc.html" target="_blank">
+        <div class="card" data-url="https://www.terra.com.br/diversao/entre-telas/o-rei-da-internet-e-baseado-em-uma-historia-real,fbfc97ee7979cc1214ec4943db696f154bvz0fbc.html" data-title="O Rei da Internet é baseado em uma história real?">
+            <a href="https://www.terra.com.br/diversao/entre-telas/o-rei-da-internet-e-baseado-em-uma-historia-real,fbfc97ee7979cc1214ec4943db696f154bvz0fbc.html" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/397776663-55266693113a00a25cb15oeasy-resizecom.jpg" 
-                         alt="Bernabéi valoriza vaga do Internacional e admite falhas: "Estamos no caminho""
+                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/1601869619-321c064d17f7b0ac6fb1044ab805026e.jpg" 
+                         alt="O Rei da Internet é baseado em uma história real?"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -2253,10 +2240,10 @@
                         <i class="fas fa-globe"></i> Terra
                     </div>
                     <div class="title">
-                        Bernabéi valoriza vaga do Internacional e admite falhas: "Estamos no caminho"
+                        O Rei da Internet é baseado em uma história real?
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Bernabéi valoriza vaga do Internacional e admite falhas: "Estamos no caminho"....
+                        Leia as últimas notícias sobre O Rei da Internet é baseado em uma história real?....
                     </div>
                     <div class="meta">
                         <span>
@@ -2269,7 +2256,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2314,7 +2301,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2323,30 +2310,28 @@
             </a>
         </div>
     
-        <div class="card ad-card">
-            <div class="ad-label">
-                <i class="fas fa-ad"></i> Publicidade
-            </div>
-            <div id="hpf-ad-29331025">
-                <script>
-                    atOptions = {
-                        'key' : '59b1a95083fc4642ac472862070573fb',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
-            </div>
+    <div class="card ad-card">
+        <div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+        <div style="width:100%; max-width:300px; margin:0 auto;">
+            <script>
+                atOptions = {
+                    'key' : '59b1a95083fc4642ac472862070573fb',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
         </div>
+    </div>
     
-        <div class="card" data-url="https://g1.globo.com/to/tocantins/noticia/2026/05/12/empresa-ligada-ao-jovem-aprendiz-que-mantem-contratos-com-o-governo-do-to-e-alvo-de-investigacao.ghtml" data-title="Empresa ligada ao 'Jovem Aprendiz' que mantém contratos com o governo do TO é alvo de investigação">
-            <a href="https://g1.globo.com/to/tocantins/noticia/2026/05/12/empresa-ligada-ao-jovem-aprendiz-que-mantem-contratos-com-o-governo-do-to-e-alvo-de-investigacao.ghtml" target="_blank">
+        <div class="card" data-url="https://g1.globo.com/politica/noticia/2026/05/12/alcolumbre-nao-bate-palmas-para-messias-durante-posse-de-nunes-marques-no-tse.ghtml" data-title="VÍDEO: Alcolumbre evita aplaudir Messias em posse de Nunes Marques no comando do TSE">
+            <a href="https://g1.globo.com/politica/noticia/2026/05/12/alcolumbre-nao-bate-palmas-para-messias-durante-posse-de-nunes-marques-no-tse.ghtml" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://s2-g1.glbimg.com/H4owH2dnRx0Ve7gIEW5SaV8NTIA=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/3/K/LQBqljQti2BtE312HJGg/modelo-foto-fundo-borrado-25-.png" 
-                         alt="Empresa ligada ao 'Jovem Aprendiz' que mantém contratos com o governo do TO é alvo de investigação"
+                         src="https://s2-g1.glbimg.com/UONor5l7WhAzyRXBlTzWyJKrFYM=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/c/z/ZC1FptRQKa8u1Tu0kd2Q/imagem.jpg" 
+                         alt="VÍDEO: Alcolumbre evita aplaudir Messias em posse de Nunes Marques no comando do TSE"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -2361,10 +2346,10 @@
                         <i class="fas fa-globe"></i> G1
                     </div>
                     <div class="title">
-                        Empresa ligada ao 'Jovem Aprendiz' que mantém contratos com o governo do TO é alvo de investigação
+                        VÍDEO: Alcolumbre evita aplaudir Messias em posse de Nunes Marques no comando do TSE
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Empresa ligada ao 'Jovem Aprendiz' que mantém contratos com o governo do TO é alvo de investigação....
+                        Leia as últimas notícias sobre VÍDEO: Alcolumbre evita aplaudir Messias em posse de Nunes Marques no comando do TSE....
                     </div>
                     <div class="meta">
                         <span>
@@ -2377,7 +2362,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2386,12 +2371,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www1.folha.uol.com.br/equilibrio/2026/05/olheiras-indicam-problema-de-saude-veja-o-que-dizem-medicos.shtml" data-title="Olheiras indicam problema de saúde? Veja o que dizem médicos">
-            <a href="https://www1.folha.uol.com.br/equilibrio/2026/05/olheiras-indicam-problema-de-saude-veja-o-que-dizem-medicos.shtml" target="_blank">
+        <div class="card" data-url="https://noticias.uol.com.br/ultimas-noticias/afp/2026/05/12/amazonia-esta-sob-ataque-crescente-do-crime-organizado-diz-ong.htm" data-title="Amazônia está 'sob ataque' crescente do crime organizado, diz ONG">
+            <a href="https://noticias.uol.com.br/ultimas-noticias/afp/2026/05/12/amazonia-esta-sob-ataque-crescente-do-crime-organizado-diz-ong.htm" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://f.i.uol.com.br/fotografia/2026/05/11/17785075646a01df2c45360_1778507564_3x2_rt.jpg" 
-                         alt="Olheiras indicam problema de saúde? Veja o que dizem médicos"
+                         src="https://via.placeholder.com/800x600?text=News+Image" 
+                         alt="Amazônia está 'sob ataque' crescente do crime organizado, diz ONG"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -2406,10 +2391,10 @@
                         <i class="fas fa-globe"></i> UOL
                     </div>
                     <div class="title">
-                        Olheiras indicam problema de saúde? Veja o que dizem médicos
+                        Amazônia está 'sob ataque' crescente do crime organizado, diz ONG
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Olheiras indicam problema de saúde? Veja o que dizem médicos....
+                        Leia as últimas notícias sobre Amazônia está 'sob ataque' crescente do crime organizado, diz ONG....
                     </div>
                     <div class="meta">
                         <span>
@@ -2422,7 +2407,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2431,12 +2416,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www.cnnbrasil.com.br/economia/macroeconomia/governo-perdera-quase-r-10-bi-em-tres-anos-com-fim-da-taxa-das-blusinhas/" data-title="Governo perderá quase R$ 10 bi em três anos com fim da “taxa das blusinhas”">
-            <a href="https://www.cnnbrasil.com.br/economia/macroeconomia/governo-perdera-quase-r-10-bi-em-tres-anos-com-fim-da-taxa-das-blusinhas/" target="_blank">
+        <div class="card" data-url="https://www.cnnbrasil.com.br/esportes/futebol/selecao-brasileira/ancelotti-avalia-temporada-de-neymar-melhorou-bastante-nos-ultimos-jogos/" data-title="Ancelotti avalia temporada de Neymar: “Melhorou bastante nos últimos jogos”">
+            <a href="https://www.cnnbrasil.com.br/esportes/futebol/selecao-brasileira/ancelotti-avalia-temporada-de-neymar-melhorou-bastante-nos-ultimos-jogos/" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/1-lula_taxa_blusinhas.jpeg?w=1060&h=596&crop=1" 
-                         alt="Governo perderá quase R$ 10 bi em três anos com fim da “taxa das blusinhas”"
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/03/ancelotti-e1774568638558.jpg?w=1200&h=630&crop=1" 
+                         alt="Ancelotti avalia temporada de Neymar: “Melhorou bastante nos últimos jogos”"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -2451,10 +2436,10 @@
                         <i class="fas fa-globe"></i> CNN Brasil
                     </div>
                     <div class="title">
-                        Governo perderá quase R$ 10 bi em três anos com fim da “taxa das blusinhas”
+                        Ancelotti avalia temporada de Neymar: “Melhorou bastante nos últimos jogos”
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Governo perderá quase R$ 10 bi em três anos com fim da “taxa das blusinhas”....
+                        Leia as últimas notícias sobre Ancelotti avalia temporada de Neymar: “Melhorou bastante nos últimos jogos”....
                     </div>
                     <div class="meta">
                         <span>
@@ -2467,7 +2452,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2476,30 +2461,28 @@
             </a>
         </div>
     
-        <div class="card ad-card">
-            <div class="ad-label">
-                <i class="fas fa-ad"></i> Publicidade
-            </div>
-            <div id="hpf-ad-29331025">
-                <script>
-                    atOptions = {
-                        'key' : '59b1a95083fc4642ac472862070573fb',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
-            </div>
+    <div class="card ad-card">
+        <div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+        <div style="width:100%; max-width:300px; margin:0 auto;">
+            <script>
+                atOptions = {
+                    'key' : '59b1a95083fc4642ac472862070573fb',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
         </div>
+    </div>
     
-        <div class="card" data-url="https://www.terra.com.br/noticias/brasil/politica/monark-vai-ao-conselhao-contra-ex-chefe-do-mpsp-por-exclusao-de-promotor-que-o-isentou,d9663532a249f66c74cf309775b16b25a43clbaq.html" data-title="Monark vai ao Conselhão contra ex-chefe do MPSP por 'exclusão' de promotor que o isentou">
-            <a href="https://www.terra.com.br/noticias/brasil/politica/monark-vai-ao-conselhao-contra-ex-chefe-do-mpsp-por-exclusao-de-promotor-que-o-isentou,d9663532a249f66c74cf309775b16b25a43clbaq.html" target="_blank">
+        <div class="card" data-url="https://www.terra.com.br/esportes/botafogo/justica-reverte-decisao-arbitral-e-volta-a-suspender-direitos-da-eagle-na-saf-do-botafogo,37e285b270992492b6c5788e0f8121baonzhexez.html" data-title="Justiça reverte decisão arbitral e volta a suspender direitos da Eagle na SAF do Botafogo">
+            <a href="https://www.terra.com.br/esportes/botafogo/justica-reverte-decisao-arbitral-e-volta-a-suspender-direitos-da-eagle-na-saf-do-botafogo,37e285b270992492b6c5788e0f8121baonzhexez.html" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
                          src="https://s1.trrsf.com/update-1698692222/fe/zaz-mod-t360-icons/svg/logos/terra-16x9-borda.png" 
-                         alt="Monark vai ao Conselhão contra ex-chefe do MPSP por 'exclusão' de promotor que o isentou"
+                         alt="Justiça reverte decisão arbitral e volta a suspender direitos da Eagle na SAF do Botafogo"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -2514,10 +2497,10 @@
                         <i class="fas fa-globe"></i> Terra
                     </div>
                     <div class="title">
-                        Monark vai ao Conselhão contra ex-chefe do MPSP por 'exclusão' de promotor que o isentou
+                        Justiça reverte decisão arbitral e volta a suspender direitos da Eagle na SAF do Botafogo
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Monark vai ao Conselhão contra ex-chefe do MPSP por 'exclusão' de promotor que o isentou....
+                        Leia as últimas notícias sobre Justiça reverte decisão arbitral e volta a suspender direitos da Eagle na SAF do Botafogo....
                     </div>
                     <div class="meta">
                         <span>
@@ -2530,7 +2513,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2575,7 +2558,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2584,12 +2567,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://g1.globo.com/mg/minas-gerais/noticia/2026/05/12/rodrigo-mineiro-ex-diretor-do-sistema-globo-de-radio-em-mg-morre-aos-93-anos.ghtml" data-title="Rodrigo Mineiro, ex-diretor do Sistema Globo de Rádio em MG, morre aos 93 anos">
-            <a href="https://g1.globo.com/mg/minas-gerais/noticia/2026/05/12/rodrigo-mineiro-ex-diretor-do-sistema-globo-de-radio-em-mg-morre-aos-93-anos.ghtml" target="_blank">
+        <div class="card" data-url="https://g1.globo.com/ce/ceara/suachance/noticia/2026/05/12/assembleia-legislativa-abre-selecao-para-estagiarios-de-niveis-superior-medio-e-profissionalizantes-veja-como-participar.ghtml" data-title="Assembleia Legislativa abre seleção para estagiários de níveis superior, médio e profissionalizantes; veja como participar">
+            <a href="https://g1.globo.com/ce/ceara/suachance/noticia/2026/05/12/assembleia-legislativa-abre-selecao-para-estagiarios-de-niveis-superior-medio-e-profissionalizantes-veja-como-participar.ghtml" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://s2-g1.glbimg.com/-rYuyfbVBo6e2YvHq9dyOQW-BFU=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/k/B/wyLaN0RzmKStZ3PvN4SQ/rodrigo-mineiro.avif" 
-                         alt="Rodrigo Mineiro, ex-diretor do Sistema Globo de Rádio em MG, morre aos 93 anos"
+                         src="https://s2-g1.glbimg.com/f2kx7l_Un7w7fHekdCHA0gcm96s=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/a/9/VBo27BSBecb0ETd0PSdA/alece.jpg" 
+                         alt="Assembleia Legislativa abre seleção para estagiários de níveis superior, médio e profissionalizantes; veja como participar"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -2604,10 +2587,10 @@
                         <i class="fas fa-globe"></i> G1
                     </div>
                     <div class="title">
-                        Rodrigo Mineiro, ex-diretor do Sistema Globo de Rádio em MG, morre aos 93 anos
+                        Assembleia Legislativa abre seleção para estagiários de níveis superior, médio e profissionalizantes; veja como participar
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Rodrigo Mineiro, ex-diretor do Sistema Globo de Rádio em MG, morre aos 93 anos....
+                        Leia as últimas notícias sobre Assembleia Legislativa abre seleção para estagiários de níveis superior, médio e profissionalizantes; veja como partici...
                     </div>
                     <div class="meta">
                         <span>
@@ -2620,7 +2603,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2629,30 +2612,28 @@
             </a>
         </div>
     
-        <div class="card ad-card">
-            <div class="ad-label">
-                <i class="fas fa-ad"></i> Publicidade
-            </div>
-            <div id="hpf-ad-29331025">
-                <script>
-                    atOptions = {
-                        'key' : '59b1a95083fc4642ac472862070573fb',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
-            </div>
+    <div class="card ad-card">
+        <div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+        <div style="width:100%; max-width:300px; margin:0 auto;">
+            <script>
+                atOptions = {
+                    'key' : '59b1a95083fc4642ac472862070573fb',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
         </div>
+    </div>
     
-        <div class="card" data-url="https://www1.folha.uol.com.br/colunas/rui-tavares/2026/05/crise-de-starmer-lembra-que-e-melhor-comprar-briga-e-perder-do-que-nao-comprar-e-ja-ter-perdido.shtml" data-title="Crise de Starmer lembra que é melhor comprar briga e perder do que não comprar e já ter perdido">
-            <a href="https://www1.folha.uol.com.br/colunas/rui-tavares/2026/05/crise-de-starmer-lembra-que-e-melhor-comprar-briga-e-perder-do-que-nao-comprar-e-ja-ter-perdido.shtml" target="_blank">
+        <div class="card" data-url="https://www1.folha.uol.com.br/poder/2026/05/kassio-que-agora-preside-tse-foi-a-favor-de-manter-bolsonaro-elegivel-relembre-votos.shtml" data-title="Kassio, que agora preside TSE, foi a favor de manter Bolsonaro elegível; relembre votos">
+            <a href="https://www1.folha.uol.com.br/poder/2026/05/kassio-que-agora-preside-tse-foi-a-favor-de-manter-bolsonaro-elegivel-relembre-votos.shtml" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://f.i.uol.com.br/fotografia/2026/05/12/17786309186a03c1064cb54_1778630918_3x2_rt.jpg" 
-                         alt="Crise de Starmer lembra que é melhor comprar briga e perder do que não comprar e já ter perdido"
+                         src="https://f.i.uol.com.br/fotografia/2025/02/14/173954420067af568869f7d_1739544200_3x2_rt.jpg" 
+                         alt="Kassio, que agora preside TSE, foi a favor de manter Bolsonaro elegível; relembre votos"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -2667,10 +2648,10 @@
                         <i class="fas fa-globe"></i> UOL
                     </div>
                     <div class="title">
-                        Crise de Starmer lembra que é melhor comprar briga e perder do que não comprar e já ter perdido
+                        Kassio, que agora preside TSE, foi a favor de manter Bolsonaro elegível; relembre votos
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Crise de Starmer lembra que é melhor comprar briga e perder do que não comprar e já ter perdido....
+                        Leia as últimas notícias sobre Kassio, que agora preside TSE, foi a favor de manter Bolsonaro elegível; relembre votos....
                     </div>
                     <div class="meta">
                         <span>
@@ -2683,7 +2664,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2692,12 +2673,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www.cnnbrasil.com.br/politica/waack-vale-tudo-de-lula-inclui-blusinhas-crime-e-gasolina/" data-title="Waack: Vale tudo de Lula inclui blusinhas, crime e gasolina">
-            <a href="https://www.cnnbrasil.com.br/politica/waack-vale-tudo-de-lula-inclui-blusinhas-crime-e-gasolina/" target="_blank">
+        <div class="card" data-url="https://www.cnnbrasil.com.br/entretenimento/confira-os-looks-das-celebridades-na-abertura-do-festival-de-cannes-de-2026/" data-title="Confira os looks das celebridades na abertura do Festival de Cannes de 2026">
+            <a href="https://www.cnnbrasil.com.br/entretenimento/confira-os-looks-das-celebridades-na-abertura-do-festival-de-cannes-de-2026/" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/WhatsApp-Image-2026-05-12-at-13.36.50.jpeg?w=884&h=453&crop=1" 
-                         alt="Waack: Vale tudo de Lula inclui blusinhas, crime e gasolina"
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/cannes.png?w=1200&h=630&crop=1" 
+                         alt="Confira os looks das celebridades na abertura do Festival de Cannes de 2026"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -2712,10 +2693,10 @@
                         <i class="fas fa-globe"></i> CNN Brasil
                     </div>
                     <div class="title">
-                        Waack: Vale tudo de Lula inclui blusinhas, crime e gasolina
+                        Confira os looks das celebridades na abertura do Festival de Cannes de 2026
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Waack: Vale tudo de Lula inclui blusinhas, crime e gasolina....
+                        Leia as últimas notícias sobre Confira os looks das celebridades na abertura do Festival de Cannes de 2026....
                     </div>
                     <div class="meta">
                         <span>
@@ -2728,7 +2709,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2737,12 +2718,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www.terra.com.br/economia/curiosidade-alimenta-evolucao-humana-defendem-cientistas-em-abertura-do-sao-paulo-innovation-week,c3875c970af1d6195b453b68f523ca53my2crgdr.html" data-title="'Curiosidade alimenta evolução humana', defendem cientistas em abertura do São Paulo Innovation Week">
-            <a href="https://www.terra.com.br/economia/curiosidade-alimenta-evolucao-humana-defendem-cientistas-em-abertura-do-sao-paulo-innovation-week,c3875c970af1d6195b453b68f523ca53my2crgdr.html" target="_blank">
+        <div class="card" data-url="https://www.terra.com.br/esportes/tenis/sinner-ganha-em-roma-e-se-iguala-a-djokovic-como-o-maior-vencedor-em-torneios-de-masters-1000,0547662e3d8c12a9d92cfe23b49c57d3iulqi0t1.html" data-title="Sinner ganha em Roma e se iguala a Djokovic como o maior vencedor em torneios de Masters 1000">
+            <a href="https://www.terra.com.br/esportes/tenis/sinner-ganha-em-roma-e-se-iguala-a-djokovic-como-o-maior-vencedor-em-torneios-de-masters-1000,0547662e3d8c12a9d92cfe23b49c57d3iulqi0t1.html" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/440901428-3xb2wzavdrhnbh63yqymc4fhce.jpg" 
-                         alt="'Curiosidade alimenta evolução humana', defendem cientistas em abertura do São Paulo Innovation Week"
+                         src="https://s1.trrsf.com/update-1698692222/fe/zaz-mod-t360-icons/svg/logos/terra-16x9-borda.png" 
+                         alt="Sinner ganha em Roma e se iguala a Djokovic como o maior vencedor em torneios de Masters 1000"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -2757,10 +2738,10 @@
                         <i class="fas fa-globe"></i> Terra
                     </div>
                     <div class="title">
-                        'Curiosidade alimenta evolução humana', defendem cientistas em abertura do São Paulo Innovation Week
+                        Sinner ganha em Roma e se iguala a Djokovic como o maior vencedor em torneios de Masters 1000
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre 'Curiosidade alimenta evolução humana', defendem cientistas em abertura do São Paulo Innovation Week....
+                        Leia as últimas notícias sobre Sinner ganha em Roma e se iguala a Djokovic como o maior vencedor em torneios de Masters 1000....
                     </div>
                     <div class="meta">
                         <span>
@@ -2773,7 +2754,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2782,23 +2763,21 @@
             </a>
         </div>
     
-        <div class="card ad-card">
-            <div class="ad-label">
-                <i class="fas fa-ad"></i> Publicidade
-            </div>
-            <div id="hpf-ad-29331025">
-                <script>
-                    atOptions = {
-                        'key' : '59b1a95083fc4642ac472862070573fb',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
-            </div>
+    <div class="card ad-card">
+        <div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+        <div style="width:100%; max-width:300px; margin:0 auto;">
+            <script>
+                atOptions = {
+                    'key' : '59b1a95083fc4642ac472862070573fb',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
         </div>
+    </div>
     
         <div class="card" data-url="https://www.bbc.com/portuguese/articles/clyp28w80xlo?at_medium=RSS&at_campaign=rss" data-title="Hantavírus mata quase metade dos infectados no Brasil: onde há mais risco (e por que não tem a ver com surto em cruzeiro)">
             <a href="https://www.bbc.com/portuguese/articles/clyp28w80xlo?at_medium=RSS&at_campaign=rss" target="_blank">
@@ -2836,7 +2815,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2845,12 +2824,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://g1.globo.com/to/tocantins/playlist/videos-jornal-anhanguera-2-edicao-to-de-terca-feira-12-de-maio-de-2026.ghtml" data-title="VÍDEOS: Jornal Anhanguera 2ª Edição-TO de terça-feira, 12 de maio de 2026">
-            <a href="https://g1.globo.com/to/tocantins/playlist/videos-jornal-anhanguera-2-edicao-to-de-terca-feira-12-de-maio-de-2026.ghtml" target="_blank">
+        <div class="card" data-url="https://g1.globo.com/to/tocantins/noticia/2026/05/12/empresa-ligada-ao-jovem-aprendiz-que-mantem-contratos-com-o-governo-do-to-e-alvo-de-investigacao.ghtml" data-title="Empresa ligada ao 'Jovem Aprendiz' que mantém contratos com o governo do TO é alvo de investigação">
+            <a href="https://g1.globo.com/to/tocantins/noticia/2026/05/12/empresa-ligada-ao-jovem-aprendiz-que-mantem-contratos-com-o-governo-do-to-e-alvo-de-investigacao.ghtml" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://s2-g1.glbimg.com/5LSI5GRsW7P7GdA4qrgZgejkrFA=/s01.video.glbimg.com/deo/vi/47/58/14605847" 
-                         alt="VÍDEOS: Jornal Anhanguera 2ª Edição-TO de terça-feira, 12 de maio de 2026"
+                         src="https://s2-g1.glbimg.com/H4owH2dnRx0Ve7gIEW5SaV8NTIA=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/3/K/LQBqljQti2BtE312HJGg/modelo-foto-fundo-borrado-25-.png" 
+                         alt="Empresa ligada ao 'Jovem Aprendiz' que mantém contratos com o governo do TO é alvo de investigação"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -2865,10 +2844,10 @@
                         <i class="fas fa-globe"></i> G1
                     </div>
                     <div class="title">
-                        VÍDEOS: Jornal Anhanguera 2ª Edição-TO de terça-feira, 12 de maio de 2026
+                        Empresa ligada ao 'Jovem Aprendiz' que mantém contratos com o governo do TO é alvo de investigação
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre VÍDEOS: Jornal Anhanguera 2ª Edição-TO de terça-feira, 12 de maio de 2026....
+                        Leia as últimas notícias sobre Empresa ligada ao 'Jovem Aprendiz' que mantém contratos com o governo do TO é alvo de investigação....
                     </div>
                     <div class="meta">
                         <span>
@@ -2881,7 +2860,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2890,12 +2869,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www1.folha.uol.com.br/mundo/2026/05/encontro-de-trump-e-xi-na-china-deve-ter-projecao-de-aparencia-de-estabilidade-como-principal-marca.shtml" data-title="Encontro de Trump e Xi na China deve ter projeção de aparência de estabilidade como principal marca">
-            <a href="https://www1.folha.uol.com.br/mundo/2026/05/encontro-de-trump-e-xi-na-china-deve-ter-projecao-de-aparencia-de-estabilidade-como-principal-marca.shtml" target="_blank">
+        <div class="card" data-url="https://www1.folha.uol.com.br/mercado/2026/05/disputa-entre-socios-da-azzas-2154-aprofunda-estresse-em-grupo-dono-de-hering-e-arezzo.shtml" data-title="Disputa entre sócios da Azzas 2154 aprofunda estresse em grupo dono de Hering e Arezzo">
+            <a href="https://www1.folha.uol.com.br/mercado/2026/05/disputa-entre-socios-da-azzas-2154-aprofunda-estresse-em-grupo-dono-de-hering-e-arezzo.shtml" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://f.i.uol.com.br/fotografia/2026/03/15/177359942969b6fac5b37f8_1773599429_3x2_rt.jpg" 
-                         alt="Encontro de Trump e Xi na China deve ter projeção de aparência de estabilidade como principal marca"
+                         src="https://f.i.uol.com.br/fotografia/2026/05/12/17786339456a03ccd90e4b1_1778633945_3x2_rt.jpg" 
+                         alt="Disputa entre sócios da Azzas 2154 aprofunda estresse em grupo dono de Hering e Arezzo"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -2910,10 +2889,10 @@
                         <i class="fas fa-globe"></i> UOL
                     </div>
                     <div class="title">
-                        Encontro de Trump e Xi na China deve ter projeção de aparência de estabilidade como principal marca
+                        Disputa entre sócios da Azzas 2154 aprofunda estresse em grupo dono de Hering e Arezzo
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Encontro de Trump e Xi na China deve ter projeção de aparência de estabilidade como principal marca....
+                        Leia as últimas notícias sobre Disputa entre sócios da Azzas 2154 aprofunda estresse em grupo dono de Hering e Arezzo....
                     </div>
                     <div class="meta">
                         <span>
@@ -2926,7 +2905,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2935,30 +2914,28 @@
             </a>
         </div>
     
-        <div class="card ad-card">
-            <div class="ad-label">
-                <i class="fas fa-ad"></i> Publicidade
-            </div>
-            <div id="hpf-ad-29331025">
-                <script>
-                    atOptions = {
-                        'key' : '59b1a95083fc4642ac472862070573fb',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
-            </div>
+    <div class="card ad-card">
+        <div class="ad-label"><i class="fas fa-ad"></i> Publicidade</div>
+        <div style="width:100%; max-width:300px; margin:0 auto;">
+            <script>
+                atOptions = {
+                    'key' : '59b1a95083fc4642ac472862070573fb',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/59b1a95083fc4642ac472862070573fb/invoke.js"></script>
         </div>
+    </div>
     
-        <div class="card" data-url="https://www.cnnbrasil.com.br/economia/negocios/pagbank-tem-lucro-recorrente-de-r-575-milhoes-no-1o-trimestre/" data-title="PagBank tem lucro recorrente de R$ 575 milhões no 1º trimestre">
-            <a href="https://www.cnnbrasil.com.br/economia/negocios/pagbank-tem-lucro-recorrente-de-r-575-milhoes-no-1o-trimestre/" target="_blank">
+        <div class="card" data-url="https://www.cnnbrasil.com.br/entretenimento/shania-twain-fala-sobre-sua-primeira-vez-apresentando-o-acm-awards/" data-title="Shania Twain fala sobre sua primeira vez apresentando o ACM Awards">
+            <a href="https://www.cnnbrasil.com.br/entretenimento/shania-twain-fala-sobre-sua-primeira-vez-apresentando-o-acm-awards/" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/03/Sede-do-PagBank-Sao-Paulo_04-1-e1733158382154.webp?w=1200&h=630&crop=1" 
-                         alt="PagBank tem lucro recorrente de R$ 575 milhões no 1º trimestre"
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/07/shania.jpg?w=1200&h=630&crop=1" 
+                         alt="Shania Twain fala sobre sua primeira vez apresentando o ACM Awards"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -2973,10 +2950,10 @@
                         <i class="fas fa-globe"></i> CNN Brasil
                     </div>
                     <div class="title">
-                        PagBank tem lucro recorrente de R$ 575 milhões no 1º trimestre
+                        Shania Twain fala sobre sua primeira vez apresentando o ACM Awards
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre PagBank tem lucro recorrente de R$ 575 milhões no 1º trimestre....
+                        Leia as últimas notícias sobre Shania Twain fala sobre sua primeira vez apresentando o ACM Awards....
                     </div>
                     <div class="meta">
                         <span>
@@ -2989,7 +2966,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -2998,12 +2975,12 @@
             </a>
         </div>
     
-        <div class="card" data-url="https://www.terra.com.br/noticias/brasil/politica/ministro-diz-que-trump-ficou-chocado-ao-ouvir-lula-dizer-que-rejeitou-tornozeleira-para-ser-solto,3facadce15130d16dbe93a5e56043c6a5s4be91o.html" data-title="Ministro diz que Trump ficou 'chocado' ao ouvir Lula dizer que rejeitou tornozeleira para ser solto">
-            <a href="https://www.terra.com.br/noticias/brasil/politica/ministro-diz-que-trump-ficou-chocado-ao-ouvir-lula-dizer-que-rejeitou-tornozeleira-para-ser-solto,3facadce15130d16dbe93a5e56043c6a5s4be91o.html" target="_blank">
+        <div class="card" data-url="https://www.terra.com.br/esportes/bragantino/klopp-compartilha-memorias-no-rb-bragantino-e-declara-saudades-do-brasil,1aae30b3d159ac06cbca35d68767dbf1qc2vpqhs.html" data-title="Klopp compartilha memórias no RB Bragantino e declara saudades do Brasil">
+            <a href="https://www.terra.com.br/esportes/bragantino/klopp-compartilha-memorias-no-rb-bragantino-e-declara-saudades-do-brasil,1aae30b3d159ac06cbca35d68767dbf1qc2vpqhs.html" target="_blank">
                 <div class="image-container">
                     <img class="thumb" 
-                         src="https://s1.trrsf.com/update-1698692222/fe/zaz-mod-t360-icons/svg/logos/terra-16x9-borda.png" 
-                         alt="Ministro diz que Trump ficou 'chocado' ao ouvir Lula dizer que rejeitou tornozeleira para ser solto"
+                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/1489392687-gizrp7ow4aadcedeasy-resizecom.jpg" 
+                         alt="Klopp compartilha memórias no RB Bragantino e declara saudades do Brasil"
                          loading="lazy"
                          onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
                     <div class="badge">
@@ -3018,10 +2995,10 @@
                         <i class="fas fa-globe"></i> Terra
                     </div>
                     <div class="title">
-                        Ministro diz que Trump ficou 'chocado' ao ouvir Lula dizer que rejeitou tornozeleira para ser solto
+                        Klopp compartilha memórias no RB Bragantino e declara saudades do Brasil
                     </div>
                     <div class="description">
-                        Leia as últimas notícias sobre Ministro diz que Trump ficou 'chocado' ao ouvir Lula dizer que rejeitou tornozeleira para ser solto....
+                        Leia as últimas notícias sobre Klopp compartilha memórias no RB Bragantino e declara saudades do Brasil....
                     </div>
                     <div class="meta">
                         <span>
@@ -3034,7 +3011,7 @@
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -3042,6 +3019,15 @@
                 </div>
             </a>
         </div>
+    
+    <div class="ad-native">
+        <div class="ad-label" style="text-align:center; margin-bottom:10px;">
+            <i class="fas fa-star"></i> Conteúdo Patrocinado
+        </div>
+        <div id="container-3f11c2602609b7e16615caec1c58202c"></div>
+        <script async="async" data-cfasync="false" 
+                src="https://pl29431522.profitablecpmratenetwork.com/3f11c2602609b7e16615caec1c58202c/invoke.js"></script>
+    </div>
     
     </div>
     
@@ -3072,7 +3058,7 @@
             </div>
             <div class="footer-section">
                 <h4>Contato</h4>
-                <a href="#"><i class="fas fa-envelope"></i> contato@newsportal.com</a>
+                <a href="#"><i class="fas fa-envelope"></i> newsportalbr@outlook.com</a>
             </div>
         </div>
         <div class="copyright">
@@ -3082,6 +3068,10 @@
     
     <div class="back-to-top" id="backToTop" onclick="scrollToTop()">
         <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <div class="socialbar-container">
+        <script src="https://pl29431523.profitablecpmratenetwork.com/31/d8/66/31d8661dee905c0b02e59f1bb4fea352.js"></script>
     </div>
     
     <script>
@@ -3154,6 +3144,11 @@
                 backToTop.classList.remove('show');
             }
         });
+        
+        // Controle de popunder (apenas 1x por sessão)
+        if (!sessionStorage.getItem('popunder_shown')) {
+            sessionStorage.setItem('popunder_shown', 'true');
+        }
     </script>
 </body>
 </html>
