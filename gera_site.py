@@ -11,14 +11,14 @@ SITE_CONFIG = {
     "language": "pt-br",
     "theme_color": "#08111f",
     "logo_url": "https://via.placeholder.com/512x512?text=NP",
-    "site_url": "https://newsportalbr.github.io",
-    "twitter_handle": "#",
-    "facebook_page": "#",
-    "instagram": "#",
-    "analytics_id": "UA-XXXXXXX-X",  # Google Analytics ID (opcional)
-    "adsterra_code": "29331025",  # Código do Adsterra (Publisher ID)
-    "adsterra_popunder": True,  # Ativar Popunder
-    "adsterra_social_bar": True,  # Ativar Social Bar
+    "site_url": "https://seudominio.com",
+    "twitter_handle": "@seudominio",
+    "facebook_page": "seudominio",
+    "instagram": "seudominio",
+    "analytics_id": "UA-XXXXXXX-X",
+    # Configuração HighPerformanceFormat
+    "hpf_key": "59b1a95083fc4642ac472862070573fb",  # Sua key
+    "hpf_id": "29331025",  # Seu ID
 }
 
 # ===== CONFIGURAÇÕES VISUAIS =====
@@ -34,7 +34,7 @@ THEME_CONFIG = {
     "enable_dark_mode": True,
     "enable_reading_time": True,
     "enable_sharing": True,
-    "ads_frequency": 3,  # Anúncios a cada X notícias
+    "ads_frequency": 3,
     "theme_color": "#08111f",
 }
 
@@ -44,14 +44,12 @@ with open("articles.json", encoding="utf-8") as f:
 
 # ===== FUNÇÕES AUXILIARES =====
 def get_reading_time(text):
-    """Calcula tempo aproximado de leitura"""
     words_per_minute = 200
     word_count = len(text.split()) if isinstance(text, str) else 100
     minutes = max(1, round(word_count / words_per_minute))
     return minutes
 
 def generate_breadcrumb_schema():
-    """Gera schema.org para breadcrumb"""
     return {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -65,7 +63,6 @@ def generate_breadcrumb_schema():
 
 # ===== PÁGINAS LEGAIS =====
 def generate_privacy_page():
-    """Gera página de Política de Privacidade"""
     return f"""<!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -177,24 +174,18 @@ def generate_privacy_page():
         <p><strong>Última atualização:</strong> {datetime.now().strftime('%d/%m/%Y')}</p>
         
         <h2>1. Informações que Coletamos</h2>
-        <p>Coletamos informações que você nos fornece diretamente, como nome e e-mail ao se inscrever na newsletter. Também coletamos dados de uso automaticamente através de cookies e tecnologias similares.</p>
+        <p>Coletamos informações que você nos fornece diretamente, como nome e e-mail ao se inscrever na newsletter.</p>
         
-        <h2>2. Como Usamos suas Informações</h2>
-        <p>Utilizamos suas informações para enviar newsletters, melhorar nosso conteúdo, personalizar sua experiência e analisar o tráfego do site através do Google Analytics.</p>
+        <h2>2. Cookies e Anúncios</h2>
+        <p>Utilizamos a rede HighPerformanceFormat para exibir anúncios.</p>
         
-        <h2>3. Cookies e Anúncios</h2>
-        <p>Utilizamos a rede de anúncios Adsterra para exibir anúncios personalizados. O Adsterra pode usar cookies para exibir anúncios baseados em seus interesses. Para mais informações, consulte a política de privacidade do Adsterra.</p>
+        <h2>3. Seus Direitos</h2>
+        <p>Você tem direito a acessar, corrigir ou excluir seus dados pessoais.</p>
         
-        <h2>4. Seus Direitos</h2>
-        <p>Você tem direito a acessar, corrigir ou excluir seus dados pessoais. Para isso, entre em contato através do e-mail: contato@newsportal.com</p>
-        
-        <h2>5. Consentimento</h2>
-        <p>Ao usar nosso site, você concorda com nossa política de privacidade e com o uso de cookies e anúncios do Adsterra.</p>
-        
-        <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar para o início</a>
+        <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar</a>
     </div>
     <div class="footer">
-        <p>&copy; 2024 NewsPortal - Todos os direitos reservados</p>
+        <p>&copy; 2024 NewsPortal</p>
     </div>
     <script>
         function toggleTheme() {{
@@ -203,7 +194,6 @@ def generate_privacy_page():
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            
             const icon = document.querySelector('.theme-toggle i');
             if (newTheme === 'dark') {{
                 icon.classList.remove('fa-sun');
@@ -213,28 +203,19 @@ def generate_privacy_page():
                 icon.classList.add('fa-sun');
             }}
         }}
-        
         const savedTheme = localStorage.getItem('theme') || 'dark';
         document.documentElement.setAttribute('data-theme', savedTheme);
-        const icon = document.querySelector('.theme-toggle i');
-        if (savedTheme === 'light') {{
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        }}
     </script>
     <style>
-        [data-theme="dark"] {{ background: #08111f; }}
         [data-theme="light"] body {{ background: #f5f7fa; }}
         [data-theme="light"] .header {{ background: #ffffff; }}
         [data-theme="light"] .container {{ background: #ffffff; }}
         [data-theme="light"] p {{ color: #4a5a7a; }}
-        [data-theme="light"] .footer {{ background: #ffffff; }}
     </style>
 </body>
 </html>"""
 
 def generate_terms_page():
-    """Gera página de Termos de Uso"""
     return f"""<!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -322,11 +303,6 @@ def generate_terms_page():
             text-align: center;
             margin-top: 50px;
         }}
-        @media (max-width: 768px) {{
-            .container {{ margin: 20px; padding: 20px; }}
-            h1 {{ font-size: 24px; }}
-            h2 {{ font-size: 20px; }}
-        }}
     </style>
 </head>
 <body>
@@ -346,27 +322,18 @@ def generate_terms_page():
         <p><strong>Última atualização:</strong> {datetime.now().strftime('%d/%m/%Y')}</p>
         
         <h2>1. Aceitação dos Termos</h2>
-        <p>Ao acessar e usar o NewsPortal, você concorda em cumprir estes Termos de Uso. Se não concordar, por favor, não utilize nosso site.</p>
+        <p>Ao acessar e usar o NewsPortal, você concorda com estes Termos de Uso.</p>
         
         <h2>2. Conteúdo do Site</h2>
-        <p>Todo o conteúdo publicado é para fins informativos. Não garantimos a precisão, completude ou atualidade das informações.</p>
+        <p>Todo o conteúdo é para fins informativos. Não garantimos precisão absoluta.</p>
         
-        <h2>3. Propriedade Intelectual</h2>
-        <p>Todo o conteúdo, marcas, logos e design são propriedade do NewsPortal. Você não pode reproduzir, distribuir ou modificar nosso conteúdo sem autorização prévia.</p>
+        <h2>3. Anúncios</h2>
+        <p>Utilizamos a rede HighPerformanceFormat para exibir anúncios.</p>
         
-        <h2>4. Anúncios</h2>
-        <p>Utilizamos a rede Adsterra para exibir anúncios. Não nos responsabilizamos pelo conteúdo dos anúncios exibidos por terceiros.</p>
-        
-        <h2>5. Limitação de Responsabilidade</h2>
-        <p>O NewsPortal não será responsável por quaisquer danos diretos, indiretos ou consequenciais decorrentes do uso do site.</p>
-        
-        <h2>6. Modificações dos Termos</h2>
-        <p>Reservamos o direito de modificar estes termos a qualquer momento. As alterações entram em vigor imediatamente após a publicação.</p>
-        
-        <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar para o início</a>
+        <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar</a>
     </div>
     <div class="footer">
-        <p>&copy; 2024 NewsPortal - Todos os direitos reservados</p>
+        <p>&copy; 2024 NewsPortal</p>
     </div>
     <script>
         function toggleTheme() {{
@@ -375,33 +342,10 @@ def generate_terms_page():
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            
-            const icon = document.querySelector('.theme-toggle i');
-            if (newTheme === 'dark') {{
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            }} else {{
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            }}
         }}
-        
         const savedTheme = localStorage.getItem('theme') || 'dark';
         document.documentElement.setAttribute('data-theme', savedTheme);
-        const icon = document.querySelector('.theme-toggle i');
-        if (savedTheme === 'light') {{
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        }}
     </script>
-    <style>
-        [data-theme="dark"] {{ background: #08111f; }}
-        [data-theme="light"] body {{ background: #f5f7fa; }}
-        [data-theme="light"] .header {{ background: #ffffff; }}
-        [data-theme="light"] .container {{ background: #ffffff; }}
-        [data-theme="light"] p {{ color: #4a5a7a; }}
-        [data-theme="light"] .footer {{ background: #ffffff; }}
-    </style>
 </body>
 </html>"""
 
@@ -412,56 +356,38 @@ html = f"""<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     
-    <!-- SEO Básico -->
     <title>{SITE_CONFIG['title']}</title>
     <meta name="description" content="{SITE_CONFIG['description']}">
     <meta name="keywords" content="{SITE_CONFIG['keywords']}">
     <meta name="author" content="{SITE_CONFIG['author']}">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="{SITE_CONFIG['site_url']}">
     
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{SITE_CONFIG['site_url']}">
     <meta property="og:title" content="{SITE_CONFIG['title']}">
     <meta property="og:description" content="{SITE_CONFIG['description']}">
     <meta property="og:image" content="{SITE_CONFIG['logo_url']}">
     <meta property="og:site_name" content="{SITE_CONFIG['name']}">
-    <meta property="og:locale" content="pt_BR">
     
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="{SITE_CONFIG['site_url']}">
     <meta name="twitter:title" content="{SITE_CONFIG['title']}">
     <meta name="twitter:description" content="{SITE_CONFIG['description']}">
     <meta name="twitter:image" content="{SITE_CONFIG['logo_url']}">
-    <meta name="twitter:site" content="{SITE_CONFIG['twitter_handle']}">
     
-    <!-- Outros Metas -->
     <meta name="theme-color" content="{SITE_CONFIG['theme_color']}">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📰</text></svg>">
     
-    <!-- Schema.org -->
     <script type="application/ld+json">
     {{
         "@context": "https://schema.org",
         "@type": "NewsMediaOrganization",
         "name": "{SITE_CONFIG['name']}",
-        "url": "{SITE_CONFIG['site_url']}",
-        "logo": "{SITE_CONFIG['logo_url']}"
+        "url": "{SITE_CONFIG['site_url']}"
     }}
     </script>
     
-    <script type="application/ld+json">
-    {json.dumps(generate_breadcrumb_schema(), ensure_ascii=False)}
-    </script>
-    
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={SITE_CONFIG['analytics_id']}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -470,21 +396,18 @@ html = f"""<!DOCTYPE html>
         gtag('config', '{SITE_CONFIG['analytics_id']}');
     </script>
     
-    <!-- Adstera Network -->
-    <script type='text/javascript' src='//pl25455238.toprevenuegate.com/7a/7b/8f/7a7b8f6b3f8f8e8f8a8f8e8f8a8f8e8f.js'></script>
-    
-    <!-- Adsterra Popunder Code -->
-    <script type='text/javascript'>
-        var adsterra_ad = {{
-            channel: '{SITE_CONFIG["adsterra_code"]}',
-            client: '{SITE_CONFIG["adsterra_code"]}',
-            format: 'popunder',
-            test: 1  // Remove this line when going live
+    <!-- HighPerformanceFormat -->
+    <script>
+        atOptions = {{
+            'key' : '{SITE_CONFIG["hpf_key"]}',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {{}}
         }};
     </script>
-    <script type='text/javascript' src='//pl25455238.toprevenuegate.com/popunder.js'></script>
+    <script src="https://www.highperformanceformat.com/{SITE_CONFIG['hpf_key']}/invoke.js"></script>
     
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -515,11 +438,7 @@ html = f"""<!DOCTYPE html>
             --shadow: rgba(0, 0, 0, 0.1);
         }}
         
-        * {{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }}
+        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
         
         body {{
             background: var(--background);
@@ -529,21 +448,6 @@ html = f"""<!DOCTYPE html>
             transition: var(--transition);
         }}
         
-        /* Scrollbar */
-        ::-webkit-scrollbar {{
-            width: 8px;
-        }}
-        
-        ::-webkit-scrollbar-track {{
-            background: var(--secondary);
-        }}
-        
-        ::-webkit-scrollbar-thumb {{
-            background: var(--primary);
-            border-radius: 5px;
-        }}
-        
-        /* Header */
         .header {{
             background: linear-gradient(135deg, var(--secondary) 0%, var(--card-bg) 100%);
             padding: 15px 20px;
@@ -552,7 +456,6 @@ html = f"""<!DOCTYPE html>
             top: 0;
             z-index: 1000;
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px var(--shadow);
         }}
         
         .header-content {{
@@ -603,7 +506,6 @@ html = f"""<!DOCTYPE html>
             transform: scale(1.05);
         }}
         
-        /* Container */
         .container {{
             max-width: 1400px;
             margin: 0 auto;
@@ -613,7 +515,6 @@ html = f"""<!DOCTYPE html>
             gap: clamp(15px, 3vw, 30px);
         }}
         
-        /* Cards */
         .card {{
             background: var(--card-bg);
             border-radius: 16px;
@@ -679,7 +580,6 @@ html = f"""<!DOCTYPE html>
             border-radius: 20px;
             font-size: clamp(10px, 3vw, 12px);
             font-weight: bold;
-            z-index: 1;
         }}
         
         .reading-time {{
@@ -703,7 +603,6 @@ html = f"""<!DOCTYPE html>
             margin-bottom: 8px;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 1px;
             display: flex;
             align-items: center;
             gap: 6px;
@@ -764,14 +663,13 @@ html = f"""<!DOCTYPE html>
             transform: scale(1.1);
         }}
         
-        /* Anúncio Adsterra */
         .ad-card {{
             background: linear-gradient(135deg, var(--card-bg), var(--secondary));
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 280px;
+            min-height: 300px;
             text-align: center;
             border: 2px dashed var(--primary);
             padding: 20px;
@@ -785,13 +683,6 @@ html = f"""<!DOCTYPE html>
             margin-bottom: 15px;
         }}
         
-        .adsterra-banner {{
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-        }}
-        
-        /* Newsletter */
         .newsletter {{
             background: linear-gradient(135deg, var(--primary), var(--accent));
             border-radius: 16px;
@@ -805,10 +696,6 @@ html = f"""<!DOCTYPE html>
         .newsletter h3 {{
             font-size: clamp(20px, 6vw, 28px);
             margin-bottom: 15px;
-        }}
-        
-        .newsletter p {{
-            font-size: clamp(12px, 4vw, 16px);
         }}
         
         .newsletter-form {{
@@ -837,15 +724,8 @@ html = f"""<!DOCTYPE html>
             cursor: pointer;
             font-weight: bold;
             transition: var(--transition);
-            font-size: clamp(12px, 4vw, 14px);
         }}
         
-        .newsletter-form button:hover {{
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }}
-        
-        /* Footer */
         .footer {{
             background: var(--secondary);
             padding: 40px 20px 20px;
@@ -864,11 +744,6 @@ html = f"""<!DOCTYPE html>
         .footer-section h4 {{
             color: var(--primary);
             margin-bottom: 15px;
-            font-size: clamp(16px, 4vw, 18px);
-        }}
-        
-        .footer-section p, .footer-section a {{
-            font-size: clamp(12px, 3.5vw, 14px);
         }}
         
         .footer-section a {{
@@ -912,10 +787,8 @@ html = f"""<!DOCTYPE html>
             padding-top: 30px;
             border-top: 1px solid rgba(73, 167, 255, 0.1);
             color: var(--text-secondary);
-            font-size: clamp(11px, 3vw, 14px);
         }}
         
-        /* Back to top */
         .back-to-top {{
             position: fixed;
             bottom: 20px;
@@ -940,12 +813,6 @@ html = f"""<!DOCTYPE html>
             visibility: visible;
         }}
         
-        .back-to-top:hover {{
-            transform: translateY(-5px);
-            background: var(--accent);
-        }}
-        
-        /* Responsive */
         @media (max-width: 768px) {{
             .container {{
                 grid-template-columns: 1fr;
@@ -953,35 +820,9 @@ html = f"""<!DOCTYPE html>
             .footer-content {{
                 grid-template-columns: 1fr;
                 text-align: center;
-                gap: 25px;
             }}
             .social-links {{
                 justify-content: center;
-            }}
-            .footer-section a {{
-                text-align: center;
-            }}
-        }}
-        
-        @media (max-width: 480px) {{
-            .header-content {{
-                flex-direction: row;
-            }}
-            .newsletter-form input {{
-                min-width: 100%;
-            }}
-            .newsletter-form button {{
-                width: 100%;
-            }}
-        }}
-        
-        /* Touch optimizations */
-        @media (hover: none) and (pointer: coarse) {{
-            .card:hover {{
-                transform: none;
-            }}
-            .share-btn:hover {{
-                transform: none;
             }}
         }}
         
@@ -1017,18 +858,24 @@ html = f"""<!DOCTYPE html>
     <div class="container">
 """
 
-def generate_adsterra_ad():
-    """Gera anúncio do Adsterra"""
+def generate_ad():
     return f"""
-        <div class="adsterra-banner">
-            <iframe
-                src="https://publishers.adsterra.com/offers/offers?pub_id={SITE_CONFIG['adsterra_code']}&format=300x250"
-                width="100%"
-                height="250"
-                scrolling="no"
-                frameborder="0"
-                style="border:none; overflow:hidden;">
-            </iframe>
+        <div class="card ad-card">
+            <div class="ad-label">
+                <i class="fas fa-ad"></i> Publicidade
+            </div>
+            <div id="hpf-ad-{SITE_CONFIG['hpf_id']}">
+                <script>
+                    atOptions = {{
+                        'key' : '{SITE_CONFIG["hpf_key"]}',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {{}}
+                    }};
+                </script>
+                <script src="https://www.highperformanceformat.com/{SITE_CONFIG['hpf_key']}/invoke.js"></script>
+            </div>
         </div>
     """
 
@@ -1073,7 +920,7 @@ for i, article in enumerate(articles):
                             <button class="share-btn" onclick="shareArticle('facebook', this)">
                                 <i class="fab fa-facebook"></i>
                             </button>
-                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                            <button class="share-btn" onclick="shareArticle('whatsapp", this)">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>
@@ -1083,9 +930,8 @@ for i, article in enumerate(articles):
         </div>
     """
     
-    # Insere anúncios do Adsterra a cada X notícias
     if (i + 1) % THEME_CONFIG['ads_frequency'] == 0 and (i + 1) != len(articles):
-        html += generate_adsterra_ad()
+        html += generate_ad()
 
 html += """
     </div>
@@ -1103,12 +949,11 @@ html += """
         <div class="footer-content">
             <div class="footer-section">
                 <h4><i class="fas fa-newspaper"></i> Sobre Nós</h4>
-                <p>Portal de notícias comprometido com informações precisas e atualizadas do Brasil e mundo.</p>
+                <p>Portal de notícias comprometido com informações precisas.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-section">
@@ -1119,11 +964,10 @@ html += """
             <div class="footer-section">
                 <h4>Contato</h4>
                 <a href="#"><i class="fas fa-envelope"></i> contato@newsportal.com</a>
-                <a href="#"><i class="fas fa-phone"></i> (11) 99999-9999</a>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2024 NewsPortal - Todos os direitos reservados | Feito com <i class="fas fa-heart" style="color: #ff6b35;"></i> para você</p>
+            <p>&copy; 2024 NewsPortal - Todos os direitos reservados</p>
         </div>
     </div>
     
@@ -1132,7 +976,6 @@ html += """
     </div>
     
     <script>
-        // Dark Mode
         const themeToggle = document.getElementById('themeToggle');
         const themeText = document.getElementById('themeText');
         const currentTheme = localStorage.getItem('theme') || 'dark';
@@ -1159,7 +1002,6 @@ html += """
             setTheme(newTheme);
         });
         
-        // Compartilhamento
         window.shareArticle = function(platform, element) {
             const card = element.closest('.card');
             const url = card.getAttribute('data-url');
@@ -1184,15 +1026,13 @@ html += """
             }
         };
         
-        // Newsletter
         window.subscribeNewsletter = function(event) {
             event.preventDefault();
             const email = event.target.querySelector('input[type="email"]').value;
-            alert(`Obrigado por se inscrever! 📧 ${email}\\nEm breve você receberá nossas novidades.`);
+            alert(`Obrigado por se inscrever! 📧 ${email}`);
             event.target.reset();
         };
         
-        // Back to Top
         window.scrollToTop = function() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
@@ -1204,33 +1044,6 @@ html += """
             } else {
                 backToTop.classList.remove('show');
             }
-        });
-        
-        // Lazy loading
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src || img.src;
-                    imageObserver.unobserve(img);
-                }
-            });
-        });
-        
-        document.querySelectorAll('.thumb').forEach(img => imageObserver.observe(img));
-        
-        // Analytics
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('click', function(e) {
-                if (e.target.closest('.share-btn')) return;
-                const title = this.getAttribute('data-title');
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'click_article', {
-                        'event_category': 'engagement',
-                        'event_label': title
-                    });
-                }
-            });
         });
     </script>
 </body>
