@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Termos de Uso - NewsPortal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #08111f;
+            color: #fff;
+            line-height: 1.6;
+        }
+        .header {
+            background: #0d1726;
+            padding: 15px 20px;
+            border-bottom: 3px solid #49a7ff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #49a7ff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo i { font-size: 28px; }
+        .theme-toggle {
+            background: #0f1a2e;
+            border: 1px solid #49a7ff;
+            padding: 8px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .theme-toggle:hover {
+            background: #49a7ff;
+            transform: scale(1.05);
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #0f1a2e;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        h1 { color: #49a7ff; margin-bottom: 20px; font-size: 28px; }
+        h2 { color: #49a7ff; margin: 25px 0 15px; font-size: 22px; }
+        p { margin-bottom: 15px; color: #a0b3d9; }
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background: #49a7ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .back-button:hover {
+            background: #ff6b35;
+            transform: translateY(-2px);
+        }
+        .footer {
+            background: #0d1726;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        @media (max-width: 768px) {
+            .container { margin: 20px; padding: 20px; }
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-newspaper"></i>
+                <span>NewsPortal</span>
+            </a>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+    <div class="container">
+        <h1><i class="fas fa-file-contract"></i> Termos de Uso</h1>
+        <p><strong>Última atualização:</strong> 13/05/2026</p>
+        
+        <h2>1. Aceitação dos Termos</h2>
+        <p>Ao acessar e usar o NewsPortal, você concorda em cumprir estes Termos de Uso. Se não concordar, por favor, não utilize nosso site.</p>
+        
+        <h2>2. Conteúdo do Site</h2>
+        <p>Todo o conteúdo publicado é para fins informativos. Não garantimos a precisão, completude ou atualidade das informações.</p>
+        
+        <h2>3. Propriedade Intelectual</h2>
+        <p>Todo o conteúdo, marcas, logos e design são propriedade do NewsPortal. Você não pode reproduzir, distribuir ou modificar nosso conteúdo sem autorização prévia.</p>
+        
+        <h2>4. Anúncios</h2>
+        <p>Utilizamos a rede Adsterra para exibir anúncios. Não nos responsabilizamos pelo conteúdo dos anúncios exibidos por terceiros.</p>
+        
+        <h2>5. Limitação de Responsabilidade</h2>
+        <p>O NewsPortal não será responsável por quaisquer danos diretos, indiretos ou consequenciais decorrentes do uso do site.</p>
+        
+        <h2>6. Modificações dos Termos</h2>
+        <p>Reservamos o direito de modificar estes termos a qualquer momento. As alterações entram em vigor imediatamente após a publicação.</p>
+        
+        <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar para o início</a>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 NewsPortal - Todos os direitos reservados</p>
+    </div>
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            const icon = document.querySelector('.theme-toggle i');
+            if (newTheme === 'dark') {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+        
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        const icon = document.querySelector('.theme-toggle i');
+        if (savedTheme === 'light') {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+    </script>
+    <style>
+        [data-theme="dark"] { background: #08111f; }
+        [data-theme="light"] body { background: #f5f7fa; }
+        [data-theme="light"] .header { background: #ffffff; }
+        [data-theme="light"] .container { background: #ffffff; }
+        [data-theme="light"] p { color: #4a5a7a; }
+        [data-theme="light"] .footer { background: #ffffff; }
+    </style>
+</body>
+</html>

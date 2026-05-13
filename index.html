@@ -1,0 +1,3183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <!-- SEO Básico -->
+    <title>NewsPortal - Últimas Notícias em Tempo Real</title>
+    <meta name="description" content="Portal de notícias atualizado constantemente com as principais manchetes do Brasil e do mundo. Tecnologia, política, economia e entretenimento.">
+    <meta name="keywords" content="notícias, portal, atualidades, Brasil, mundo, tecnologia, política, economia">
+    <meta name="author" content="NewsPortal">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <link rel="canonical" href="https://newsportalbr.github.io">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://newsportalbr.github.io">
+    <meta property="og:title" content="NewsPortal - Últimas Notícias em Tempo Real">
+    <meta property="og:description" content="Portal de notícias atualizado constantemente com as principais manchetes do Brasil e do mundo. Tecnologia, política, economia e entretenimento.">
+    <meta property="og:image" content="https://via.placeholder.com/512x512?text=NP">
+    <meta property="og:site_name" content="NewsPortal">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://newsportalbr.github.io">
+    <meta name="twitter:title" content="NewsPortal - Últimas Notícias em Tempo Real">
+    <meta name="twitter:description" content="Portal de notícias atualizado constantemente com as principais manchetes do Brasil e do mundo. Tecnologia, política, economia e entretenimento.">
+    <meta name="twitter:image" content="https://via.placeholder.com/512x512?text=NP">
+    <meta name="twitter:site" content="#">
+    
+    <!-- Outros Metas -->
+    <meta name="theme-color" content="#08111f">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📰</text></svg>">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsMediaOrganization",
+        "name": "NewsPortal",
+        "url": "https://newsportalbr.github.io",
+        "logo": "https://via.placeholder.com/512x512?text=NP"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://newsportalbr.github.io"}]}
+    </script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXXXX-X');
+    </script>
+    
+    <!-- Adstera Network -->
+    <script type='text/javascript' src='//pl25455238.toprevenuegate.com/7a/7b/8f/7a7b8f6b3f8f8e8f8a8f8e8f8a8f8e8f.js'></script>
+    
+    <!-- Adsterra Popunder Code -->
+    <script type='text/javascript'>
+        var adsterra_ad = {
+            channel: '29331025',
+            client: '29331025',
+            format: 'popunder',
+            test: 1  // Remove this line when going live
+        };
+    </script>
+    <script type='text/javascript' src='//pl25455238.toprevenuegate.com/popunder.js'></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #49a7ff;
+            --secondary: #0d1726;
+            --background: #08111f;
+            --card-bg: #0f1a2e;
+            --text: #ffffff;
+            --text-secondary: #a0b3d9;
+            --accent: #ff6b35;
+            --shadow: rgba(0, 0, 0, 0.3);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        [data-theme="dark"] {
+            --background: #08111f;
+            --card-bg: #0f1a2e;
+            --text: #ffffff;
+            --text-secondary: #a0b3d9;
+        }
+        
+        [data-theme="light"] {
+            --background: #f5f7fa;
+            --card-bg: #ffffff;
+            --text: #1a2a4a;
+            --text-secondary: #4a5a7a;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: var(--background);
+            color: var(--text);
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            transition: var(--transition);
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--secondary);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--card-bg) 100%);
+            padding: 15px 20px;
+            border-bottom: 3px solid var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo {
+            font-size: clamp(20px, 5vw, 28px);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            color: var(--primary);
+            font-size: clamp(24px, 6vw, 32px);
+        }
+        
+        .logo span {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .theme-toggle {
+            background: var(--card-bg);
+            border: 1px solid var(--primary);
+            padding: 8px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            color: var(--text);
+            font-size: clamp(14px, 4vw, 18px);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .theme-toggle:hover {
+            background: var(--primary);
+            transform: scale(1.05);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: clamp(15px, 4vw, 30px);
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: clamp(15px, 3vw, 30px);
+        }
+        
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(73, 167, 255, 0.1);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+        
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--shadow);
+            border-color: var(--primary);
+        }
+        
+        .card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            background: var(--secondary);
+        }
+        
+        .thumb {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .card:hover .thumb {
+            transform: scale(1.05);
+        }
+        
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--primary);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: clamp(10px, 3vw, 12px);
+            font-weight: bold;
+            z-index: 1;
+        }
+        
+        .reading-time {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: clamp(9px, 2.5vw, 11px);
+        }
+        
+        .content {
+            padding: clamp(12px, 4vw, 20px);
+        }
+        
+        .site {
+            color: var(--primary);
+            font-size: clamp(10px, 3vw, 12px);
+            margin-bottom: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .title {
+            font-size: clamp(16px, 5vw, 20px);
+            line-height: 1.4;
+            font-weight: bold;
+            margin-bottom: 10px;
+            transition: var(--transition);
+        }
+        
+        .card:hover .title {
+            color: var(--primary);
+        }
+        
+        .description {
+            color: var(--text-secondary);
+            font-size: clamp(12px, 3.5vw, 14px);
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: clamp(10px, 3vw, 12px);
+            color: var(--text-secondary);
+            border-top: 1px solid rgba(73, 167, 255, 0.1);
+            padding-top: 10px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .share-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: clamp(12px, 3.5vw, 14px);
+            padding: 4px;
+        }
+        
+        .share-btn:hover {
+            color: var(--primary);
+            transform: scale(1.1);
+        }
+        
+        /* Anúncio Adsterra */
+        .ad-card {
+            background: linear-gradient(135deg, var(--card-bg), var(--secondary));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 280px;
+            text-align: center;
+            border: 2px dashed var(--primary);
+            padding: 20px;
+        }
+        
+        .ad-label {
+            font-size: clamp(10px, 3vw, 11px);
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        
+        .adsterra-banner {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 16px;
+            padding: clamp(20px, 5vw, 40px);
+            text-align: center;
+            margin: 20px auto;
+            max-width: 90%;
+            width: 800px;
+        }
+        
+        .newsletter h3 {
+            font-size: clamp(20px, 6vw, 28px);
+            margin-bottom: 15px;
+        }
+        
+        .newsletter p {
+            font-size: clamp(12px, 4vw, 16px);
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            min-width: 200px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: clamp(14px, 4vw, 16px);
+        }
+        
+        .newsletter-form button {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: var(--transition);
+            font-size: clamp(12px, 4vw, 14px);
+        }
+        
+        .newsletter-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--secondary);
+            padding: 40px 20px 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: clamp(16px, 4vw, 18px);
+        }
+        
+        .footer-section p, .footer-section a {
+            font-size: clamp(12px, 3.5vw, 14px);
+        }
+        
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: var(--transition);
+        }
+        
+        .footer-section a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(73, 167, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(73, 167, 255, 0.1);
+            color: var(--text-secondary);
+            font-size: clamp(11px, 3vw, 14px);
+        }
+        
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            background: var(--accent);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 25px;
+            }
+            .social-links {
+                justify-content: center;
+            }
+            .footer-section a {
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-content {
+                flex-direction: row;
+            }
+            .newsletter-form input {
+                min-width: 100%;
+            }
+            .newsletter-form button {
+                width: 100%;
+            }
+        }
+        
+        /* Touch optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .card:hover {
+                transform: none;
+            }
+            .share-btn:hover {
+                transform: none;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .card {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-newspaper"></i>
+                <span>NewsPortal</span>
+            </div>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i> <span id="themeText">Escuro</span>
+            </button>
+        </div>
+    </div>
+    
+    <div class="container">
+
+        <div class="card" data-url="https://www.bbc.com/portuguese/articles/cp9p0x17zevo?at_medium=RSS&at_campaign=rss" data-title="Querem tratar evangélicos como pessoas de outra categoria, diz pastora que denunciou violência sexual e uniu Janja e Michelle">
+            <a href="https://www.bbc.com/portuguese/articles/cp9p0x17zevo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://ichef.bbci.co.uk/news/1024/branded_portuguese/4bfb/live/b1f45f40-4d79-11f1-8019-43fe7faaee2b.png" 
+                         alt="Querem tratar evangélicos como pessoas de outra categoria, diz pastora que denunciou violência sexual e uniu Janja e Michelle"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> BBC
+                    </div>
+                    <div class="title">
+                        Querem tratar evangélicos como pessoas de outra categoria, diz pastora que denunciou violência sexual e uniu Janja e Michelle
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Querem tratar evangélicos como pessoas de outra categoria, diz pastora que denunciou violência sexual e uniu Janja e Mi...
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://g1.globo.com/to/tocantins/noticia/2026/05/12/acidente-envolvendo-tres-carros-deixa-um-morto-e-feridos-na-br-153.ghtml" data-title="Acidente envolvendo três carros deixa um morto e feridos na BR-153">
+            <a href="https://g1.globo.com/to/tocantins/noticia/2026/05/12/acidente-envolvendo-tres-carros-deixa-um-morto-e-feridos-na-br-153.ghtml" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://s2-g1.glbimg.com/mEZnisBYHt2PFv4mjjdOPkjgBCI=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/d/L/B5CgEBQQW75yYAI9r6OQ/foto-e-montagem-vertical-27-.jpg" 
+                         alt="Acidente envolvendo três carros deixa um morto e feridos na BR-153"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> G1
+                    </div>
+                    <div class="title">
+                        Acidente envolvendo três carros deixa um morto e feridos na BR-153
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Acidente envolvendo três carros deixa um morto e feridos na BR-153....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www1.folha.uol.com.br/cotidiano/2026/05/nao-acho-que-essa-empresa-deva-ser-privatizada-diz-presidente-do-metro-de-sp.shtml" data-title="'Não acho que essa empresa deva ser privatizada', diz presidente do Metrô de SP">
+            <a href="https://www1.folha.uol.com.br/cotidiano/2026/05/nao-acho-que-essa-empresa-deva-ser-privatizada-diz-presidente-do-metro-de-sp.shtml" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://f.i.uol.com.br/fotografia/2025/12/08/1765220599693720f7a507b_1765220599_3x2_rt.jpg" 
+                         alt="'Não acho que essa empresa deva ser privatizada', diz presidente do Metrô de SP"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> UOL
+                    </div>
+                    <div class="title">
+                        'Não acho que essa empresa deva ser privatizada', diz presidente do Metrô de SP
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre 'Não acho que essa empresa deva ser privatizada', diz presidente do Metrô de SP....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="adsterra-banner">
+            <iframe
+                src="https://publishers.adsterra.com/offers/offers?pub_id=29331025&format=300x250"
+                width="100%"
+                height="250"
+                scrolling="no"
+                frameborder="0"
+                style="border:none; overflow:hidden;">
+            </iframe>
+        </div>
+    
+        <div class="card" data-url="https://www.cnnbrasil.com.br/politica/durigan-diz-que-trump-se-sensibilizou-com-historia-de-lula/" data-title="Durigan diz que Trump se sensibilizou com história de Lula">
+            <a href="https://www.cnnbrasil.com.br/politica/durigan-diz-que-trump-se-sensibilizou-com-historia-de-lula/" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/WhatsApp-Image-2026-05-07-at-15.23.57-e1778262255674.jpeg?w=1200&h=630&crop=1" 
+                         alt="Durigan diz que Trump se sensibilizou com história de Lula"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> CNN Brasil
+                    </div>
+                    <div class="title">
+                        Durigan diz que Trump se sensibilizou com história de Lula
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Durigan diz que Trump se sensibilizou com história de Lula....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.terra.com.br/vida-e-estilo/saude/hospitais-na-linha-de-frente-da-crise-climatica-como-a-saude-se-prepara-para-as-novas-emergencias,28d6fca4ffe91315bb189992a70d0708ltlkwv3b.html" data-title="Hospitais na linha de frente da crise climática: como a saúde se prepara para as novas emergências">
+            <a href="https://www.terra.com.br/vida-e-estilo/saude/hospitais-na-linha-de-frente-da-crise-climatica-como-a-saude-se-prepara-para-as-novas-emergencias,28d6fca4ffe91315bb189992a70d0708ltlkwv3b.html" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/2133690329-hospital-1778630798694.jpg" 
+                         alt="Hospitais na linha de frente da crise climática: como a saúde se prepara para as novas emergências"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> Terra
+                    </div>
+                    <div class="title">
+                        Hospitais na linha de frente da crise climática: como a saúde se prepara para as novas emergências
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Hospitais na linha de frente da crise climática: como a saúde se prepara para as novas emergências....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.bbc.com/portuguese/articles/cvgznlrlg8wo?at_medium=RSS&at_campaign=rss" data-title="Por que MP descartou envolvimento de adolescentes em morte do cão Orelha e pediu arquivamento do caso">
+            <a href="https://www.bbc.com/portuguese/articles/cvgznlrlg8wo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://ichef.bbci.co.uk/news/1024/branded_portuguese/358f/live/4e71fc10-4e4c-11f1-bd52-e755d604ece4.png" 
+                         alt="Por que MP descartou envolvimento de adolescentes em morte do cão Orelha e pediu arquivamento do caso"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> BBC
+                    </div>
+                    <div class="title">
+                        Por que MP descartou envolvimento de adolescentes em morte do cão Orelha e pediu arquivamento do caso
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Por que MP descartou envolvimento de adolescentes em morte do cão Orelha e pediu arquivamento do caso....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="adsterra-banner">
+            <iframe
+                src="https://publishers.adsterra.com/offers/offers?pub_id=29331025&format=300x250"
+                width="100%"
+                height="250"
+                scrolling="no"
+                frameborder="0"
+                style="border:none; overflow:hidden;">
+            </iframe>
+        </div>
+    
+        <div class="card" data-url="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/nunes-marques-assume-a-presidencia-do-tse-ministro-vai-comandar-as-eleicoes-de-outubro.ghtml" data-title="Nunes Marques assume a presidência do TSE; ministro vai comandar as eleições de outubro">
+            <a href="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/nunes-marques-assume-a-presidencia-do-tse-ministro-vai-comandar-as-eleicoes-de-outubro.ghtml" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://s2-g1.glbimg.com/IqFqNUBDcRt19CiMXO2yheJQZbg=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/X/u/UloBlwQSiQBGmfJyplHA/globo-canal-4-20260512-2000-frame-139508.jpeg" 
+                         alt="Nunes Marques assume a presidência do TSE; ministro vai comandar as eleições de outubro"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> G1
+                    </div>
+                    <div class="title">
+                        Nunes Marques assume a presidência do TSE; ministro vai comandar as eleições de outubro
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Nunes Marques assume a presidência do TSE; ministro vai comandar as eleições de outubro....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www1.folha.uol.com.br/colunas/marceloviana/2026/05/grothendieck-o-mais-complexo-dos-matematicos.shtml" data-title="Grothendieck, o mais complexo dos matemáticos">
+            <a href="https://www1.folha.uol.com.br/colunas/marceloviana/2026/05/grothendieck-o-mais-complexo-dos-matematicos.shtml" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://f.i.uol.com.br/fotografia/2026/05/12/17786150076a0382df147b6_1778615007_3x2_lg.jpg" 
+                         alt="Grothendieck, o mais complexo dos matemáticos"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> UOL
+                    </div>
+                    <div class="title">
+                        Grothendieck, o mais complexo dos matemáticos
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Grothendieck, o mais complexo dos matemáticos....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.cnnbrasil.com.br/esportes/futebol/copa-do-mundo/campeonato-de-bafo-com-album-da-copa-tera-entrada-gratuita-na-paulista/" data-title="Campeonato de “bafo” com figurinhas da Copa será realizado na Paulista">
+            <a href="https://www.cnnbrasil.com.br/esportes/futebol/copa-do-mundo/campeonato-de-bafo-com-album-da-copa-tera-entrada-gratuita-na-paulista/" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/04/WhatsApp-Image-2026-04-25-at-14.25.57-2-e1778635457386.jpeg?w=1200&h=630&crop=1" 
+                         alt="Campeonato de “bafo” com figurinhas da Copa será realizado na Paulista"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> CNN Brasil
+                    </div>
+                    <div class="title">
+                        Campeonato de “bafo” com figurinhas da Copa será realizado na Paulista
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Campeonato de “bafo” com figurinhas da Copa será realizado na Paulista....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="adsterra-banner">
+            <iframe
+                src="https://publishers.adsterra.com/offers/offers?pub_id=29331025&format=300x250"
+                width="100%"
+                height="250"
+                scrolling="no"
+                frameborder="0"
+                style="border:none; overflow:hidden;">
+            </iframe>
+        </div>
+    
+        <div class="card" data-url="https://www.terra.com.br/esportes/futebol/copa-2026/copa-do-mundo-avenida-paulista-recebera-campeonato-de-bafo,8d4f9c6d77928387641803023e9e26076egad5kz.html" data-title="Copa do Mundo: Avenida Paulista receberá campeonato de bafo">
+            <a href="https://www.terra.com.br/esportes/futebol/copa-2026/copa-do-mundo-avenida-paulista-recebera-campeonato-de-bafo,8d4f9c6d77928387641803023e9e26076egad5kz.html" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/07/1737293855-u2is3fdehfb5hjoyhxnfafbop4.png" 
+                         alt="Copa do Mundo: Avenida Paulista receberá campeonato de bafo"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> Terra
+                    </div>
+                    <div class="title">
+                        Copa do Mundo: Avenida Paulista receberá campeonato de bafo
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Copa do Mundo: Avenida Paulista receberá campeonato de bafo....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.bbc.com/portuguese/articles/c202pevwxwdo?at_medium=RSS&at_campaign=rss" data-title="Por que encontro entre Trump e Xi deve definir relação entre superpotências por anos">
+            <a href="https://www.bbc.com/portuguese/articles/c202pevwxwdo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://ichef.bbci.co.uk/news/1024/branded_portuguese/f45a/live/32331d60-4deb-11f1-9cc8-93479330ab4b.jpg" 
+                         alt="Por que encontro entre Trump e Xi deve definir relação entre superpotências por anos"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> BBC
+                    </div>
+                    <div class="title">
+                        Por que encontro entre Trump e Xi deve definir relação entre superpotências por anos
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Por que encontro entre Trump e Xi deve definir relação entre superpotências por anos....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://g1.globo.com/am/amazonas/noticia/2026/05/12/morre-will-franco-secretario-adjunto-da-casa-civil-do-amazonas-aos-41-anos.ghtml" data-title="Morre Will Franco, secretário adjunto da Casa Civil do Amazonas, aos 41 anos">
+            <a href="https://g1.globo.com/am/amazonas/noticia/2026/05/12/morre-will-franco-secretario-adjunto-da-casa-civil-do-amazonas-aos-41-anos.ghtml" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://s2-g1.glbimg.com/QAPOiQNIenLAaxcUaMYRaUYbGoM=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/a/1/srXdyBQKC12B2YkglzeQ/g1-will-franco.jpg" 
+                         alt="Morre Will Franco, secretário adjunto da Casa Civil do Amazonas, aos 41 anos"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> G1
+                    </div>
+                    <div class="title">
+                        Morre Will Franco, secretário adjunto da Casa Civil do Amazonas, aos 41 anos
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Morre Will Franco, secretário adjunto da Casa Civil do Amazonas, aos 41 anos....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="adsterra-banner">
+            <iframe
+                src="https://publishers.adsterra.com/offers/offers?pub_id=29331025&format=300x250"
+                width="100%"
+                height="250"
+                scrolling="no"
+                frameborder="0"
+                style="border:none; overflow:hidden;">
+            </iframe>
+        </div>
+    
+        <div class="card" data-url="https://www1.folha.uol.com.br/cotidiano/2026/05/foto-inedita-de-missa-campal-apos-lei-aurea-e-encontrada-na-franca.shtml" data-title="Foto inédita de missa campal após Lei Áurea é encontrada na França">
+            <a href="https://www1.folha.uol.com.br/cotidiano/2026/05/foto-inedita-de-missa-campal-apos-lei-aurea-e-encontrada-na-franca.shtml" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://f.i.uol.com.br/fotografia/2026/05/08/177821041369fd566d9bcab_1778210413_3x2_xl.jpg" 
+                         alt="Foto inédita de missa campal após Lei Áurea é encontrada na França"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> UOL
+                    </div>
+                    <div class="title">
+                        Foto inédita de missa campal após Lei Áurea é encontrada na França
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Foto inédita de missa campal após Lei Áurea é encontrada na França....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.cnnbrasil.com.br/economia/macroeconomia/governo-perdera-quase-r-10-bi-em-tres-anos-com-fim-da-taxa-das-blusinhas/" data-title="Governo perderá quase R$ 10 bi em três anos com fim da “taxa das blusinhas”">
+            <a href="https://www.cnnbrasil.com.br/economia/macroeconomia/governo-perdera-quase-r-10-bi-em-tres-anos-com-fim-da-taxa-das-blusinhas/" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/1-lula_taxa_blusinhas.jpeg?w=1060&h=596&crop=1" 
+                         alt="Governo perderá quase R$ 10 bi em três anos com fim da “taxa das blusinhas”"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> CNN Brasil
+                    </div>
+                    <div class="title">
+                        Governo perderá quase R$ 10 bi em três anos com fim da “taxa das blusinhas”
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Governo perderá quase R$ 10 bi em três anos com fim da “taxa das blusinhas”....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.terra.com.br/esportes/botafogo/justica-suspende-decisao-que-devolve-direitos-politicos-a-eagle,42f02ded18f680e60a37dc4d7992cac6m9itqc4c.html" data-title="Justiça suspende decisão que devolve direitos políticos à Eagle">
+            <a href="https://www.terra.com.br/esportes/botafogo/justica-suspende-decisao-que-devolve-direitos-politicos-a-eagle,42f02ded18f680e60a37dc4d7992cac6m9itqc4c.html" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/1344835630-untitled-610x400.jpg" 
+                         alt="Justiça suspende decisão que devolve direitos políticos à Eagle"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> Terra
+                    </div>
+                    <div class="title">
+                        Justiça suspende decisão que devolve direitos políticos à Eagle
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Justiça suspende decisão que devolve direitos políticos à Eagle....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="adsterra-banner">
+            <iframe
+                src="https://publishers.adsterra.com/offers/offers?pub_id=29331025&format=300x250"
+                width="100%"
+                height="250"
+                scrolling="no"
+                frameborder="0"
+                style="border:none; overflow:hidden;">
+            </iframe>
+        </div>
+    
+        <div class="card" data-url="https://www.bbc.com/portuguese/articles/c4g4kx2v17ko?at_medium=RSS&at_campaign=rss" data-title="Como ditadura teria assassinado Juscelino Kubitschek, segundo comissão">
+            <a href="https://www.bbc.com/portuguese/articles/c4g4kx2v17ko?at_medium=RSS&at_campaign=rss" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://ichef.bbci.co.uk/news/1024/branded_portuguese/cf24/live/f8f28360-4d63-11f1-940e-cbf9737b8b8f.jpg" 
+                         alt="Como ditadura teria assassinado Juscelino Kubitschek, segundo comissão"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> BBC
+                    </div>
+                    <div class="title">
+                        Como ditadura teria assassinado Juscelino Kubitschek, segundo comissão
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Como ditadura teria assassinado Juscelino Kubitschek, segundo comissão....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/guerra-no-oriente-medio-pressiona-inflacao-nos-eua-que-atinge-o-nivel-mais-alto-em-3-anos.ghtml" data-title="Guerra no Oriente Médio pressiona inflação nos EUA, que atinge o nível mais alto em 3 anos">
+            <a href="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/guerra-no-oriente-medio-pressiona-inflacao-nos-eua-que-atinge-o-nivel-mais-alto-em-3-anos.ghtml" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://s2-g1.glbimg.com/JKpZqSBDOKUfr3_3mLc6qipOsJE=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/P/X/rDGtvERdywLyknJKB3BQ/globo-canal-4-20260512-2000-frame-96462.jpeg" 
+                         alt="Guerra no Oriente Médio pressiona inflação nos EUA, que atinge o nível mais alto em 3 anos"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> G1
+                    </div>
+                    <div class="title">
+                        Guerra no Oriente Médio pressiona inflação nos EUA, que atinge o nível mais alto em 3 anos
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Guerra no Oriente Médio pressiona inflação nos EUA, que atinge o nível mais alto em 3 anos....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://tnonline.uol.com.br/noticias/cotidiano/mega-sena-concurso-3007-acumula-e-premio-sobe-para-r-60-milhoes-1089070" data-title="Mega-Sena concurso 3007 acumula e prémio sobe para R$ 60 milhões">
+            <a href="https://tnonline.uol.com.br/noticias/cotidiano/mega-sena-concurso-3007-acumula-e-premio-sobe-para-r-60-milhoes-1089070" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://cdn.tnonline.com.br/img/Instant-Article/1080000/1200x630/111-apostas-acertaram-cinco-dezenas-e-vao-receber--01083957-0-202604232300/ScaleProportionalFillBackground-1.jpg?fallback=https%3A%2F%2Fcdn.tnonline.com.br%2Fimg%2FInstant-Article%2F1080000%2F111-apostas-acertaram-cinco-dezenas-e-vao-receber--01083957-0-202604232300.png%3Fxid%3D1718739&xid=1718739" 
+                         alt="Mega-Sena concurso 3007 acumula e prémio sobe para R$ 60 milhões"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> UOL
+                    </div>
+                    <div class="title">
+                        Mega-Sena concurso 3007 acumula e prémio sobe para R$ 60 milhões
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Mega-Sena concurso 3007 acumula e prémio sobe para R$ 60 milhões....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="adsterra-banner">
+            <iframe
+                src="https://publishers.adsterra.com/offers/offers?pub_id=29331025&format=300x250"
+                width="100%"
+                height="250"
+                scrolling="no"
+                frameborder="0"
+                style="border:none; overflow:hidden;">
+            </iframe>
+        </div>
+    
+        <div class="card" data-url="https://www.cnnbrasil.com.br/politica/waack-vale-tudo-de-lula-inclui-blusinhas-crime-e-gasolina/" data-title="Waack: Vale tudo de Lula inclui blusinhas, crime e gasolina">
+            <a href="https://www.cnnbrasil.com.br/politica/waack-vale-tudo-de-lula-inclui-blusinhas-crime-e-gasolina/" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/WhatsApp-Image-2026-05-12-at-13.36.50.jpeg?w=884&h=453&crop=1" 
+                         alt="Waack: Vale tudo de Lula inclui blusinhas, crime e gasolina"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> CNN Brasil
+                    </div>
+                    <div class="title">
+                        Waack: Vale tudo de Lula inclui blusinhas, crime e gasolina
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Waack: Vale tudo de Lula inclui blusinhas, crime e gasolina....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.terra.com.br/esportes/botafogo/justica-derruba-decisao-arbitral-e-eagle-perde-poderes-politicos-na-saf-do-botafogo,8b3cf718ec51e6232d40fcdc83ffd36a7ylbupkk.html" data-title="Justiça derruba decisão arbitral e Eagle perde poderes políticos na SAF do Botafogo">
+            <a href="https://www.terra.com.br/esportes/botafogo/justica-derruba-decisao-arbitral-e-eagle-perde-poderes-politicos-na-saf-do-botafogo,8b3cf718ec51e6232d40fcdc83ffd36a7ylbupkk.html" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/601936297-botafogo-v-cuiaba-brasileirao-2024-2048x1365.jpg" 
+                         alt="Justiça derruba decisão arbitral e Eagle perde poderes políticos na SAF do Botafogo"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> Terra
+                    </div>
+                    <div class="title">
+                        Justiça derruba decisão arbitral e Eagle perde poderes políticos na SAF do Botafogo
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Justiça derruba decisão arbitral e Eagle perde poderes políticos na SAF do Botafogo....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.bbc.com/portuguese/articles/cy82nlg43zgo?at_medium=RSS&at_campaign=rss" data-title="Por que polêmica envolvendo Israel pode mudar o Eurovision para sempre">
+            <a href="https://www.bbc.com/portuguese/articles/cy82nlg43zgo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://ichef.bbci.co.uk/news/1024/branded_portuguese/00f6/live/e826dfe0-4d45-11f1-bd52-e755d604ece4.jpg" 
+                         alt="Por que polêmica envolvendo Israel pode mudar o Eurovision para sempre"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> BBC
+                    </div>
+                    <div class="title">
+                        Por que polêmica envolvendo Israel pode mudar o Eurovision para sempre
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Por que polêmica envolvendo Israel pode mudar o Eurovision para sempre....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="adsterra-banner">
+            <iframe
+                src="https://publishers.adsterra.com/offers/offers?pub_id=29331025&format=300x250"
+                width="100%"
+                height="250"
+                scrolling="no"
+                frameborder="0"
+                style="border:none; overflow:hidden;">
+            </iframe>
+        </div>
+    
+        <div class="card" data-url="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/peritos-investigam-causas-da-explosao-de-gas-que-deixou-um-morto-e-destruiu-dezenas-de-casas-em-sao-paulo.ghtml" data-title="Peritos investigam causas da explosão de gás que deixou um morto e destruiu dezenas de casas em São Paulo">
+            <a href="https://g1.globo.com/jornal-nacional/noticia/2026/05/12/peritos-investigam-causas-da-explosao-de-gas-que-deixou-um-morto-e-destruiu-dezenas-de-casas-em-sao-paulo.ghtml" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://s2-g1.glbimg.com/cJECciS7y4ddul6bVZUwexCnvN8=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/t/V/a3h19LS6qGxaw9KCAz9g/globo-canal-4-20260512-2000-frame-88089.jpeg" 
+                         alt="Peritos investigam causas da explosão de gás que deixou um morto e destruiu dezenas de casas em São Paulo"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> G1
+                    </div>
+                    <div class="title">
+                        Peritos investigam causas da explosão de gás que deixou um morto e destruiu dezenas de casas em São Paulo
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Peritos investigam causas da explosão de gás que deixou um morto e destruiu dezenas de casas em São Paulo....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://tnonline.uol.com.br/noticias/cotidiano/ex-funcionario-que-teria-matado-empresario-em-sc-ja-foi-condenado-por-sequestro-em-2024-1089069" data-title="Ex-funcionário que teria matado empresário em SC já foi condenado por sequestro em 2024">
+            <a href="https://tnonline.uol.com.br/noticias/cotidiano/ex-funcionario-que-teria-matado-empresario-em-sc-ja-foi-condenado-por-sequestro-em-2024-1089069" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://cdn.tnonline.com.br/img/Artigo-Destaque/1080000/1200x630/alfredo-fraga-dos-santos-53-anos-foi-sequestrado-e-01089069-0-202605122235/ScaleProportionalFillBackground-1.jpg?fallback=https%3A%2F%2Fcdn.tnonline.com.br%2Fimg%2FArtigo-Destaque%2F1080000%2Falfredo-fraga-dos-santos-53-anos-foi-sequestrado-e-01089069-0-202605122235.jpg%3Fxid%3D1718717&xid=1718717" 
+                         alt="Ex-funcionário que teria matado empresário em SC já foi condenado por sequestro em 2024"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> UOL
+                    </div>
+                    <div class="title">
+                        Ex-funcionário que teria matado empresário em SC já foi condenado por sequestro em 2024
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Ex-funcionário que teria matado empresário em SC já foi condenado por sequestro em 2024....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.cnnbrasil.com.br/economia/negocios/pagbank-tem-lucro-recorrente-de-r-575-milhoes-no-1o-trimestre/" data-title="PagBank tem lucro recorrente de R$ 575 milhões no 1º trimestre">
+            <a href="https://www.cnnbrasil.com.br/economia/negocios/pagbank-tem-lucro-recorrente-de-r-575-milhoes-no-1o-trimestre/" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/03/Sede-do-PagBank-Sao-Paulo_04-1-e1733158382154.webp?w=1200&h=630&crop=1" 
+                         alt="PagBank tem lucro recorrente de R$ 575 milhões no 1º trimestre"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> CNN Brasil
+                    </div>
+                    <div class="title">
+                        PagBank tem lucro recorrente de R$ 575 milhões no 1º trimestre
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre PagBank tem lucro recorrente de R$ 575 milhões no 1º trimestre....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="adsterra-banner">
+            <iframe
+                src="https://publishers.adsterra.com/offers/offers?pub_id=29331025&format=300x250"
+                width="100%"
+                height="250"
+                scrolling="no"
+                frameborder="0"
+                style="border:none; overflow:hidden;">
+            </iframe>
+        </div>
+    
+        <div class="card" data-url="https://www.terra.com.br/diversao/musica/shakira-emplaca-duas-musicas-na-hot-100-da-billboard-brasil-apos-show-em-copacabana,f6a041f5385188b7b1d24cb4b30dcc3buf2cn9kr.html" data-title="Shakira emplaca duas músicas na Hot 100 da Billboard Brasil após show em Copacabana">
+            <a href="https://www.terra.com.br/diversao/musica/shakira-emplaca-duas-musicas-na-hot-100-da-billboard-brasil-apos-show-em-copacabana,f6a041f5385188b7b1d24cb4b30dcc3buf2cn9kr.html" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/1348690280-shakira-todo-mundo-no-rio.jpg" 
+                         alt="Shakira emplaca duas músicas na Hot 100 da Billboard Brasil após show em Copacabana"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> Terra
+                    </div>
+                    <div class="title">
+                        Shakira emplaca duas músicas na Hot 100 da Billboard Brasil após show em Copacabana
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Shakira emplaca duas músicas na Hot 100 da Billboard Brasil após show em Copacabana....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.bbc.com/portuguese/articles/czd2prld130o?at_medium=RSS&at_campaign=rss" data-title="Datafolha, Quaest: antes de novas pesquisas para presidente, quem está à frente até agora?">
+            <a href="https://www.bbc.com/portuguese/articles/czd2prld130o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://ichef.bbci.co.uk/news/1024/branded_portuguese/5379/live/8df8b7e0-485a-11f1-ac78-2112837ce2aa.jpg" 
+                         alt="Datafolha, Quaest: antes de novas pesquisas para presidente, quem está à frente até agora?"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> BBC
+                    </div>
+                    <div class="title">
+                        Datafolha, Quaest: antes de novas pesquisas para presidente, quem está à frente até agora?
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Datafolha, Quaest: antes de novas pesquisas para presidente, quem está à frente até agora?....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://g1.globo.com/politica/noticia/2026/05/12/alcolumbre-nao-bate-palmas-para-messias-durante-posse-de-nunes-marques-no-tse.ghtml" data-title="VÍDEO: Alcolumbre decide não bater palmas para Messias em posse de Nunes Marques no STF">
+            <a href="https://g1.globo.com/politica/noticia/2026/05/12/alcolumbre-nao-bate-palmas-para-messias-durante-posse-de-nunes-marques-no-tse.ghtml" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://s2-g1.glbimg.com/UONor5l7WhAzyRXBlTzWyJKrFYM=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/c/z/ZC1FptRQKa8u1Tu0kd2Q/imagem.jpg" 
+                         alt="VÍDEO: Alcolumbre decide não bater palmas para Messias em posse de Nunes Marques no STF"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> G1
+                    </div>
+                    <div class="title">
+                        VÍDEO: Alcolumbre decide não bater palmas para Messias em posse de Nunes Marques no STF
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre VÍDEO: Alcolumbre decide não bater palmas para Messias em posse de Nunes Marques no STF....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="adsterra-banner">
+            <iframe
+                src="https://publishers.adsterra.com/offers/offers?pub_id=29331025&format=300x250"
+                width="100%"
+                height="250"
+                scrolling="no"
+                frameborder="0"
+                style="border:none; overflow:hidden;">
+            </iframe>
+        </div>
+    
+        <div class="card" data-url="https://tnonline.uol.com.br/empregos-e-concursos/nutridani-tem-vagas-para-marumbi-kalore-bom-sucesso-borrazopolis-e-novo-itacolomi-1089067" data-title="Nutridani tem vagas para Marumbi, Kaloré, Bom Sucesso, Borrazópolis e Novo Itacolomi">
+            <a href="https://tnonline.uol.com.br/empregos-e-concursos/nutridani-tem-vagas-para-marumbi-kalore-bom-sucesso-borrazopolis-e-novo-itacolomi-1089067" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://cdn.tnonline.com.br/img/Instant-Article/1080000/1200x630/a-empresa-se-apresenta-como-uma-das-principais-emp-01089067-0-202605122231/ScaleProportionalFillBackground-1.jpg?fallback=https%3A%2F%2Fcdn.tnonline.com.br%2Fimg%2FInstant-Article%2F1080000%2Fa-empresa-se-apresenta-como-uma-das-principais-emp-01089067-0-202605122231.jpg%3Fxid%3D1718721&xid=1718721" 
+                         alt="Nutridani tem vagas para Marumbi, Kaloré, Bom Sucesso, Borrazópolis e Novo Itacolomi"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> UOL
+                    </div>
+                    <div class="title">
+                        Nutridani tem vagas para Marumbi, Kaloré, Bom Sucesso, Borrazópolis e Novo Itacolomi
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Nutridani tem vagas para Marumbi, Kaloré, Bom Sucesso, Borrazópolis e Novo Itacolomi....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.cnnbrasil.com.br/economia/macroeconomia/em-agenda-do-brics-durigan-buscara-saber-como-blindar-economia-da-guerra/" data-title="Em agenda do Brics, Durigan buscará saber como blindar economia da guerra">
+            <a href="https://www.cnnbrasil.com.br/economia/macroeconomia/em-agenda-do-brics-durigan-buscara-saber-como-blindar-economia-da-guerra/" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2023/09/53155192167_4b847ffa82_3k-e1742588543215.jpg?w=1200&h=630&crop=1" 
+                         alt="Em agenda do Brics, Durigan buscará saber como blindar economia da guerra"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> CNN Brasil
+                    </div>
+                    <div class="title">
+                        Em agenda do Brics, Durigan buscará saber como blindar economia da guerra
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Em agenda do Brics, Durigan buscará saber como blindar economia da guerra....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.terra.com.br/byte/taxa-das-blusinhas-acaba-lula-zera-imposto-de-20-sobre-compras-na-shein-shopee-e-aliexpress,1a5af8a999c367eeea46ef5ada2ca79edb3fj2tr.html" data-title="Taxa das blusinhas acaba: Lula zera imposto de 20% sobre compras na Shein, Shopee e AliExpress">
+            <a href="https://www.terra.com.br/byte/taxa-das-blusinhas-acaba-lula-zera-imposto-de-20-sobre-compras-na-shein-shopee-e-aliexpress,1a5af8a999c367eeea46ef5ada2ca79edb3fj2tr.html" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/363050180-13662000.png" 
+                         alt="Taxa das blusinhas acaba: Lula zera imposto de 20% sobre compras na Shein, Shopee e AliExpress"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> Terra
+                    </div>
+                    <div class="title">
+                        Taxa das blusinhas acaba: Lula zera imposto de 20% sobre compras na Shein, Shopee e AliExpress
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Taxa das blusinhas acaba: Lula zera imposto de 20% sobre compras na Shein, Shopee e AliExpress....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="adsterra-banner">
+            <iframe
+                src="https://publishers.adsterra.com/offers/offers?pub_id=29331025&format=300x250"
+                width="100%"
+                height="250"
+                scrolling="no"
+                frameborder="0"
+                style="border:none; overflow:hidden;">
+            </iframe>
+        </div>
+    
+        <div class="card" data-url="https://www.bbc.com/portuguese/articles/cn4py2eydp3o?at_medium=RSS&at_campaign=rss" data-title="Voos privados concentram metade dos acidentes no país">
+            <a href="https://www.bbc.com/portuguese/articles/cn4py2eydp3o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://ichef.bbci.co.uk/news/1024/branded_portuguese/4289/live/5f6d3be0-4958-11f1-ac78-2112837ce2aa.png" 
+                         alt="Voos privados concentram metade dos acidentes no país"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> BBC
+                    </div>
+                    <div class="title">
+                        Voos privados concentram metade dos acidentes no país
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Voos privados concentram metade dos acidentes no país....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://g1.globo.com/ce/ceara/suachance/noticia/2026/05/12/assembleia-legislativa-abre-selecao-para-estagiarios-de-niveis-superior-medio-e-profissionalizantes-veja-como-participar.ghtml" data-title="Assembleia Legislativa abre seleção para estagiários de níveis superior, médio e profissionalizantes; veja como participar">
+            <a href="https://g1.globo.com/ce/ceara/suachance/noticia/2026/05/12/assembleia-legislativa-abre-selecao-para-estagiarios-de-niveis-superior-medio-e-profissionalizantes-veja-como-participar.ghtml" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://s2-g1.glbimg.com/f2kx7l_Un7w7fHekdCHA0gcm96s=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/a/9/VBo27BSBecb0ETd0PSdA/alece.jpg" 
+                         alt="Assembleia Legislativa abre seleção para estagiários de níveis superior, médio e profissionalizantes; veja como participar"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> G1
+                    </div>
+                    <div class="title">
+                        Assembleia Legislativa abre seleção para estagiários de níveis superior, médio e profissionalizantes; veja como participar
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Assembleia Legislativa abre seleção para estagiários de níveis superior, médio e profissionalizantes; veja como partici...
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://noticias.uol.com.br/ultimas-noticias/afp/2026/05/12/china-pede-ao-paquistao-que-intensifique-mediacao-no-oriente-medio.htm" data-title="China pede ao Paquistão que 'intensifique' mediação no Oriente Médio">
+            <a href="https://noticias.uol.com.br/ultimas-noticias/afp/2026/05/12/china-pede-ao-paquistao-que-intensifique-mediacao-no-oriente-medio.htm" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://via.placeholder.com/800x600?text=News+Image" 
+                         alt="China pede ao Paquistão que 'intensifique' mediação no Oriente Médio"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> UOL
+                    </div>
+                    <div class="title">
+                        China pede ao Paquistão que 'intensifique' mediação no Oriente Médio
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre China pede ao Paquistão que 'intensifique' mediação no Oriente Médio....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="adsterra-banner">
+            <iframe
+                src="https://publishers.adsterra.com/offers/offers?pub_id=29331025&format=300x250"
+                width="100%"
+                height="250"
+                scrolling="no"
+                frameborder="0"
+                style="border:none; overflow:hidden;">
+            </iframe>
+        </div>
+    
+        <div class="card" data-url="https://www.cnnbrasil.com.br/economia/negocios/dasa-reverte-prejuizo-e-tem-lucro-de-r-9-milhoes-no-1o-trimestre/" data-title="Dasa reverte prejuízo e tem lucro de R$ 9 milhões no 1º trimestre">
+            <a href="https://www.cnnbrasil.com.br/economia/negocios/dasa-reverte-prejuizo-e-tem-lucro-de-r-9-milhoes-no-1o-trimestre/" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/09/WhatsApp-Image-2025-09-30-at-21.49.55.jpeg?w=1000&h=630&crop=1" 
+                         alt="Dasa reverte prejuízo e tem lucro de R$ 9 milhões no 1º trimestre"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> CNN Brasil
+                    </div>
+                    <div class="title">
+                        Dasa reverte prejuízo e tem lucro de R$ 9 milhões no 1º trimestre
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Dasa reverte prejuízo e tem lucro de R$ 9 milhões no 1º trimestre....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.terra.com.br/esportes/internacional/bernabei-valoriza-vaga-do-internacional-e-admite-falhas-estamos-no-caminho,e9bb7a83b4eefada4a8fba27e99fad34q190n8yc.html" data-title="Bernabéi valoriza vaga do Internacional e admite falhas: "Estamos no caminho"">
+            <a href="https://www.terra.com.br/esportes/internacional/bernabei-valoriza-vaga-do-internacional-e-admite-falhas-estamos-no-caminho,e9bb7a83b4eefada4a8fba27e99fad34q190n8yc.html" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/397776663-55266693113a00a25cb15oeasy-resizecom.jpg" 
+                         alt="Bernabéi valoriza vaga do Internacional e admite falhas: "Estamos no caminho""
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> Terra
+                    </div>
+                    <div class="title">
+                        Bernabéi valoriza vaga do Internacional e admite falhas: "Estamos no caminho"
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Bernabéi valoriza vaga do Internacional e admite falhas: "Estamos no caminho"....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.bbc.com/portuguese/articles/ceqp7n8887no?at_medium=RSS&at_campaign=rss" data-title="A história dos golfinhos suicidas treinados na União Soviética que o Irã comprou da Ucrânia">
+            <a href="https://www.bbc.com/portuguese/articles/ceqp7n8887no?at_medium=RSS&at_campaign=rss" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://ichef.bbci.co.uk/news/1024/branded_portuguese/eae0/live/68f05b00-4897-11f1-891e-47c72be732a7.jpg" 
+                         alt="A história dos golfinhos suicidas treinados na União Soviética que o Irã comprou da Ucrânia"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> BBC
+                    </div>
+                    <div class="title">
+                        A história dos golfinhos suicidas treinados na União Soviética que o Irã comprou da Ucrânia
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre A história dos golfinhos suicidas treinados na União Soviética que o Irã comprou da Ucrânia....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="adsterra-banner">
+            <iframe
+                src="https://publishers.adsterra.com/offers/offers?pub_id=29331025&format=300x250"
+                width="100%"
+                height="250"
+                scrolling="no"
+                frameborder="0"
+                style="border:none; overflow:hidden;">
+            </iframe>
+        </div>
+    
+        <div class="card" data-url="https://g1.globo.com/to/tocantins/noticia/2026/05/12/empresa-ligada-ao-jovem-aprendiz-que-mantem-contratos-com-o-governo-do-to-e-alvo-de-investigacao.ghtml" data-title="Empresa ligada ao 'Jovem Aprendiz' que mantém contratos com o governo do TO é alvo de investigação">
+            <a href="https://g1.globo.com/to/tocantins/noticia/2026/05/12/empresa-ligada-ao-jovem-aprendiz-que-mantem-contratos-com-o-governo-do-to-e-alvo-de-investigacao.ghtml" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://s2-g1.glbimg.com/H4owH2dnRx0Ve7gIEW5SaV8NTIA=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/3/K/LQBqljQti2BtE312HJGg/modelo-foto-fundo-borrado-25-.png" 
+                         alt="Empresa ligada ao 'Jovem Aprendiz' que mantém contratos com o governo do TO é alvo de investigação"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> G1
+                    </div>
+                    <div class="title">
+                        Empresa ligada ao 'Jovem Aprendiz' que mantém contratos com o governo do TO é alvo de investigação
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Empresa ligada ao 'Jovem Aprendiz' que mantém contratos com o governo do TO é alvo de investigação....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www1.folha.uol.com.br/mundo/2026/05/peru-tera-2o-turno-entre-keiko-fujimori-e-ex-ministro-de-castillo.shtml" data-title="Peru terá 2º turno entre Keiko Fujimori e ex-ministro de Castillo">
+            <a href="https://www1.folha.uol.com.br/mundo/2026/05/peru-tera-2o-turno-entre-keiko-fujimori-e-ex-ministro-de-castillo.shtml" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://f.i.uol.com.br/fotografia/2026/05/12/17786289396a03b94bf0be8_1778628939_3x2_rt.jpg" 
+                         alt="Peru terá 2º turno entre Keiko Fujimori e ex-ministro de Castillo"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> UOL
+                    </div>
+                    <div class="title">
+                        Peru terá 2º turno entre Keiko Fujimori e ex-ministro de Castillo
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Peru terá 2º turno entre Keiko Fujimori e ex-ministro de Castillo....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.cnnbrasil.com.br/saude/caderneta-brasileira-da-gestante-ministerio-da-saude-lanca-versao-digital/" data-title="Caderneta Brasileira da Gestante: Ministério da Saúde lança versão digital">
+            <a href="https://www.cnnbrasil.com.br/saude/caderneta-brasileira-da-gestante-ministerio-da-saude-lanca-versao-digital/" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/78cc66a9-2e56-41ea-a94a-7236335d941e.jpeg?w=663&h=305&crop=1" 
+                         alt="Caderneta Brasileira da Gestante: Ministério da Saúde lança versão digital"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> CNN Brasil
+                    </div>
+                    <div class="title">
+                        Caderneta Brasileira da Gestante: Ministério da Saúde lança versão digital
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Caderneta Brasileira da Gestante: Ministério da Saúde lança versão digital....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="adsterra-banner">
+            <iframe
+                src="https://publishers.adsterra.com/offers/offers?pub_id=29331025&format=300x250"
+                width="100%"
+                height="250"
+                scrolling="no"
+                frameborder="0"
+                style="border:none; overflow:hidden;">
+            </iframe>
+        </div>
+    
+        <div class="card" data-url="https://www.terra.com.br/noticias/brasil/politica/monark-vai-ao-conselhao-contra-ex-chefe-do-mpsp-por-exclusao-de-promotor-que-o-isentou,d9663532a249f66c74cf309775b16b25a43clbaq.html" data-title="Monark vai ao Conselhão contra ex-chefe do MPSP por 'exclusão' de promotor que o isentou">
+            <a href="https://www.terra.com.br/noticias/brasil/politica/monark-vai-ao-conselhao-contra-ex-chefe-do-mpsp-por-exclusao-de-promotor-que-o-isentou,d9663532a249f66c74cf309775b16b25a43clbaq.html" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://s1.trrsf.com/update-1698692222/fe/zaz-mod-t360-icons/svg/logos/terra-16x9-borda.png" 
+                         alt="Monark vai ao Conselhão contra ex-chefe do MPSP por 'exclusão' de promotor que o isentou"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> Terra
+                    </div>
+                    <div class="title">
+                        Monark vai ao Conselhão contra ex-chefe do MPSP por 'exclusão' de promotor que o isentou
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Monark vai ao Conselhão contra ex-chefe do MPSP por 'exclusão' de promotor que o isentou....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.bbc.com/portuguese/articles/cx21n435wv2o?at_medium=RSS&at_campaign=rss" data-title="Quando começa a Copa do Mundo de 2026 e outras perguntas sobre o primeiro Mundial com 48 seleções">
+            <a href="https://www.bbc.com/portuguese/articles/cx21n435wv2o?at_medium=RSS&at_campaign=rss" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://ichef.bbci.co.uk/news/1024/branded_portuguese/6f03/live/0b0ec6f0-4b0a-11f1-aa2f-37b7f899b59a.jpg" 
+                         alt="Quando começa a Copa do Mundo de 2026 e outras perguntas sobre o primeiro Mundial com 48 seleções"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> BBC
+                    </div>
+                    <div class="title">
+                        Quando começa a Copa do Mundo de 2026 e outras perguntas sobre o primeiro Mundial com 48 seleções
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Quando começa a Copa do Mundo de 2026 e outras perguntas sobre o primeiro Mundial com 48 seleções....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://g1.globo.com/mg/minas-gerais/noticia/2026/05/12/rodrigo-mineiro-ex-diretor-do-sistema-globo-de-radio-em-mg-morre-aos-93-anos.ghtml" data-title="Rodrigo Mineiro, ex-diretor do Sistema Globo de Rádio em MG, morre aos 93 anos">
+            <a href="https://g1.globo.com/mg/minas-gerais/noticia/2026/05/12/rodrigo-mineiro-ex-diretor-do-sistema-globo-de-radio-em-mg-morre-aos-93-anos.ghtml" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://s2-g1.glbimg.com/-rYuyfbVBo6e2YvHq9dyOQW-BFU=/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/k/B/wyLaN0RzmKStZ3PvN4SQ/rodrigo-mineiro.avif" 
+                         alt="Rodrigo Mineiro, ex-diretor do Sistema Globo de Rádio em MG, morre aos 93 anos"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> G1
+                    </div>
+                    <div class="title">
+                        Rodrigo Mineiro, ex-diretor do Sistema Globo de Rádio em MG, morre aos 93 anos
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Rodrigo Mineiro, ex-diretor do Sistema Globo de Rádio em MG, morre aos 93 anos....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="adsterra-banner">
+            <iframe
+                src="https://publishers.adsterra.com/offers/offers?pub_id=29331025&format=300x250"
+                width="100%"
+                height="250"
+                scrolling="no"
+                frameborder="0"
+                style="border:none; overflow:hidden;">
+            </iframe>
+        </div>
+    
+        <div class="card" data-url="https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/05/12/justica-ve-risco-de-dano-irreparavel-e-manda-retomar-cameras-corporais-na-pm-de-sc.htm" data-title="Justiça vê 'risco de dano irreparável' e manda retomar câmeras corporais na PM de SC">
+            <a href="https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/05/12/justica-ve-risco-de-dano-irreparavel-e-manda-retomar-cameras-corporais-na-pm-de-sc.htm" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://via.placeholder.com/800x600?text=News+Image" 
+                         alt="Justiça vê 'risco de dano irreparável' e manda retomar câmeras corporais na PM de SC"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> UOL
+                    </div>
+                    <div class="title">
+                        Justiça vê 'risco de dano irreparável' e manda retomar câmeras corporais na PM de SC
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Justiça vê 'risco de dano irreparável' e manda retomar câmeras corporais na PM de SC....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.cnnbrasil.com.br/economia/macroeconomia/governo-publica-mp-que-zera-taxa-das-blusinhas-para-compras-ate-us-50/" data-title="Governo publica MP que zera “taxa das blusinhas” para compras até US$ 50">
+            <a href="https://www.cnnbrasil.com.br/economia/macroeconomia/governo-publica-mp-que-zera-taxa-das-blusinhas-para-compras-ate-us-50/" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2026/05/lula_taxa_blusinhas.jpeg?w=1200&h=630&crop=1" 
+                         alt="Governo publica MP que zera “taxa das blusinhas” para compras até US$ 50"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> CNN Brasil
+                    </div>
+                    <div class="title">
+                        Governo publica MP que zera “taxa das blusinhas” para compras até US$ 50
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Governo publica MP que zera “taxa das blusinhas” para compras até US$ 50....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.terra.com.br/economia/curiosidade-alimenta-evolucao-humana-defendem-cientistas-em-abertura-do-sao-paulo-innovation-week,c3875c970af1d6195b453b68f523ca53my2crgdr.html" data-title="'Curiosidade alimenta evolução humana', defendem cientistas em abertura do São Paulo Innovation Week">
+            <a href="https://www.terra.com.br/economia/curiosidade-alimenta-evolucao-humana-defendem-cientistas-em-abertura-do-sao-paulo-innovation-week,c3875c970af1d6195b453b68f523ca53my2crgdr.html" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/13/440901428-3xb2wzavdrhnbh63yqymc4fhce.jpg" 
+                         alt="'Curiosidade alimenta evolução humana', defendem cientistas em abertura do São Paulo Innovation Week"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> Terra
+                    </div>
+                    <div class="title">
+                        'Curiosidade alimenta evolução humana', defendem cientistas em abertura do São Paulo Innovation Week
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre 'Curiosidade alimenta evolução humana', defendem cientistas em abertura do São Paulo Innovation Week....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="adsterra-banner">
+            <iframe
+                src="https://publishers.adsterra.com/offers/offers?pub_id=29331025&format=300x250"
+                width="100%"
+                height="250"
+                scrolling="no"
+                frameborder="0"
+                style="border:none; overflow:hidden;">
+            </iframe>
+        </div>
+    
+        <div class="card" data-url="https://www.bbc.com/portuguese/articles/clyp28w80xlo?at_medium=RSS&at_campaign=rss" data-title="Hantavírus mata quase metade dos infectados no Brasil: onde há mais risco (e por que não tem a ver com surto em cruzeiro)">
+            <a href="https://www.bbc.com/portuguese/articles/clyp28w80xlo?at_medium=RSS&at_campaign=rss" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://ichef.bbci.co.uk/news/1024/branded_portuguese/bffd/live/ad10eec0-4d70-11f1-8dfc-834fa8ba00b4.jpg" 
+                         alt="Hantavírus mata quase metade dos infectados no Brasil: onde há mais risco (e por que não tem a ver com surto em cruzeiro)"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> BBC
+                    </div>
+                    <div class="title">
+                        Hantavírus mata quase metade dos infectados no Brasil: onde há mais risco (e por que não tem a ver com surto em cruzeiro)
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Hantavírus mata quase metade dos infectados no Brasil: onde há mais risco (e por que não tem a ver com surto em cruzeir...
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://g1.globo.com/to/tocantins/playlist/videos-jornal-anhanguera-2-edicao-to-de-terca-feira-12-de-maio-de-2026.ghtml" data-title="VÍDEOS: Jornal Anhanguera 2ª Edição-TO de terça-feira, 12 de maio de 2026">
+            <a href="https://g1.globo.com/to/tocantins/playlist/videos-jornal-anhanguera-2-edicao-to-de-terca-feira-12-de-maio-de-2026.ghtml" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://s2-g1.glbimg.com/5LSI5GRsW7P7GdA4qrgZgejkrFA=/s01.video.glbimg.com/deo/vi/47/58/14605847" 
+                         alt="VÍDEOS: Jornal Anhanguera 2ª Edição-TO de terça-feira, 12 de maio de 2026"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> G1
+                    </div>
+                    <div class="title">
+                        VÍDEOS: Jornal Anhanguera 2ª Edição-TO de terça-feira, 12 de maio de 2026
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre VÍDEOS: Jornal Anhanguera 2ª Edição-TO de terça-feira, 12 de maio de 2026....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/05/12/monark-vai-ao-conselhao-contra-ex-chefe-do-mpsp-por-exclusao-de-promotor-que-o-isentou.htm" data-title="Monark vai ao Conselhão contra ex-chefe do MPSP por 'exclusão' de promotor que o isentou">
+            <a href="https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/05/12/monark-vai-ao-conselhao-contra-ex-chefe-do-mpsp-por-exclusao-de-promotor-que-o-isentou.htm" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://via.placeholder.com/800x600?text=News+Image" 
+                         alt="Monark vai ao Conselhão contra ex-chefe do MPSP por 'exclusão' de promotor que o isentou"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> UOL
+                    </div>
+                    <div class="title">
+                        Monark vai ao Conselhão contra ex-chefe do MPSP por 'exclusão' de promotor que o isentou
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Monark vai ao Conselhão contra ex-chefe do MPSP por 'exclusão' de promotor que o isentou....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="adsterra-banner">
+            <iframe
+                src="https://publishers.adsterra.com/offers/offers?pub_id=29331025&format=300x250"
+                width="100%"
+                height="250"
+                scrolling="no"
+                frameborder="0"
+                style="border:none; overflow:hidden;">
+            </iframe>
+        </div>
+    
+        <div class="card" data-url="https://www.cnnbrasil.com.br/entretenimento/paul-mccartney-recusou-convite-para-participar-de-roast-na-netflix/" data-title="Paul McCartney recusou convite para participar de roast na Netflix">
+            <a href="https://www.cnnbrasil.com.br/entretenimento/paul-mccartney-recusou-convite-para-participar-de-roast-na-netflix/" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/10/Paul-McCartney-15.jpg?w=1200&h=630&crop=1" 
+                         alt="Paul McCartney recusou convite para participar de roast na Netflix"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> CNN Brasil
+                    </div>
+                    <div class="title">
+                        Paul McCartney recusou convite para participar de roast na Netflix
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Paul McCartney recusou convite para participar de roast na Netflix....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="card" data-url="https://www.terra.com.br/noticias/brasil/politica/ministro-diz-que-trump-ficou-chocado-ao-ouvir-lula-dizer-que-rejeitou-tornozeleira-para-ser-solto,3facadce15130d16dbe93a5e56043c6a5s4be91o.html" data-title="Ministro diz que Trump ficou 'chocado' ao ouvir Lula dizer que rejeitou tornozeleira para ser solto">
+            <a href="https://www.terra.com.br/noticias/brasil/politica/ministro-diz-que-trump-ficou-chocado-ao-ouvir-lula-dizer-que-rejeitou-tornozeleira-para-ser-solto,3facadce15130d16dbe93a5e56043c6a5s4be91o.html" target="_blank">
+                <div class="image-container">
+                    <img class="thumb" 
+                         src="https://s1.trrsf.com/update-1698692222/fe/zaz-mod-t360-icons/svg/logos/terra-16x9-borda.png" 
+                         alt="Ministro diz que Trump ficou 'chocado' ao ouvir Lula dizer que rejeitou tornozeleira para ser solto"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/800x600?text=Imagem+Indisponível'">
+                    <div class="badge">
+                        <i class="fas fa-bolt"></i> Destaque
+                    </div>
+                    <div class="reading-time">
+                        <i class="far fa-clock"></i> 1 min
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="site">
+                        <i class="fas fa-globe"></i> Terra
+                    </div>
+                    <div class="title">
+                        Ministro diz que Trump ficou 'chocado' ao ouvir Lula dizer que rejeitou tornozeleira para ser solto
+                    </div>
+                    <div class="description">
+                        Leia as últimas notícias sobre Ministro diz que Trump ficou 'chocado' ao ouvir Lula dizer que rejeitou tornozeleira para ser solto....
+                    </div>
+                    <div class="meta">
+                        <span>
+                            <i class="far fa-calendar-alt"></i> 13/05/2026
+                        </span>
+                        <div class="share-buttons">
+                            <button class="share-btn" onclick="shareArticle('twitter', this)">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('facebook', this)">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                            <button class="share-btn" onclick="shareArticle('whatsapp', this)">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+    </div>
+    
+    <div class="newsletter">
+        <h3><i class="fas fa-envelope"></i> Newsletter</h3>
+        <p>Receba as principais notícias diretamente no seu email!</p>
+        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+            <input type="email" placeholder="Seu melhor email" required>
+            <button type="submit">Inscrever-se</button>
+        </form>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4><i class="fas fa-newspaper"></i> Sobre Nós</h4>
+                <p>Portal de notícias comprometido com informações precisas e atualizadas do Brasil e mundo.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="privacidade.html"><i class="fas fa-chevron-right"></i> Política de Privacidade</a>
+                <a href="termos.html"><i class="fas fa-chevron-right"></i> Termos de Uso</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <a href="#"><i class="fas fa-envelope"></i> contato@newsportal.com</a>
+                <a href="#"><i class="fas fa-phone"></i> (11) 99999-9999</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 NewsPortal - Todos os direitos reservados | Feito com <i class="fas fa-heart" style="color: #ff6b35;"></i> para você</p>
+        </div>
+    </div>
+    
+    <div class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <script>
+        // Dark Mode
+        const themeToggle = document.getElementById('themeToggle');
+        const themeText = document.getElementById('themeText');
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            const icon = themeToggle.querySelector('i');
+            if (theme === 'dark') {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                themeText.textContent = 'Escuro';
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                themeText.textContent = 'Claro';
+            }
+        }
+        
+        setTheme(currentTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+        
+        // Compartilhamento
+        window.shareArticle = function(platform, element) {
+            const card = element.closest('.card');
+            const url = card.getAttribute('data-url');
+            const title = card.getAttribute('data-title');
+            const text = encodeURIComponent(title + '\n\n' + url);
+            
+            let shareUrl = '';
+            switch(platform) {
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?text=${text}`;
+                    break;
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                    break;
+                case 'whatsapp':
+                    shareUrl = `https://wa.me/?text=${text}`;
+                    break;
+            }
+            
+            if (shareUrl) {
+                window.open(shareUrl, '_blank', 'width=600,height=400');
+            }
+        };
+        
+        // Newsletter
+        window.subscribeNewsletter = function(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            alert(`Obrigado por se inscrever! 📧 ${email}\nEm breve você receberá nossas novidades.`);
+            event.target.reset();
+        };
+        
+        // Back to Top
+        window.scrollToTop = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+        
+        window.addEventListener('scroll', () => {
+            const backToTop = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        
+        // Lazy loading
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src || img.src;
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+        
+        document.querySelectorAll('.thumb').forEach(img => imageObserver.observe(img));
+        
+        // Analytics
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (e.target.closest('.share-btn')) return;
+                const title = this.getAttribute('data-title');
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'click_article', {
+                        'event_category': 'engagement',
+                        'event_label': title
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
